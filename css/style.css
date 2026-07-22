@@ -59,6 +59,7 @@ header {
 }
 
 .btn-outline-custom {
+  padding: 10px 10px;
   color: var(--primary-blue);
   border: 2px solid var(--primary-blue);
   transition: all 0.3s;
@@ -1312,6 +1313,26 @@ header {
 
   .branch-body {
     padding: 20px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+    white-space: nowrap;
+    margin-bottom: 15px;
+  }
+
+  .glass-card {
+    padding: 20px;
+    margin: 13px;
+    width: 50%;
+  }
+
+  .glass-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .glass-card p {
+    font-size: 0.86rem;
   }
 }
 
