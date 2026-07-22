@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنظیمات</title>
+    <link rel="stylesheet" href="../css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-layout row m-0">
+        <!-- Sidebar Desktop -->
+        <aside class="sidebar d-none d-lg-block bg-white position-static top-0 col-lg-4">
+            <div class="sidebar-logo d-flex align-items-center gap-3 mb-5">
+                <img src="../assets/public/logo.png" alt="بانک ملی">
+                <span class="fs-5 fw-bold">بانک ملی</span>
+            </div>
+
+            <nav class="d-flex flex-column gap-2">
+                <a href="./dashboard.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>داشبورد</span>
+                </a>
+
+                <a href="./account.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-wallet2"></i>
+                    <span>حساب ها</span>
+                </a>
+
+                <a href="./transfer.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <span>انتقال وجه</span>
+                </a>
+
+                <a href="./transactions.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <span>گردش حساب</span>
+                </a>
+
+                <a href="./reports.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>گزارش ها</span>
+                </a>
+
+                <a href="./setting.html"
+                    class="nav-item active d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-gear"></i>
+                    <span>تنظیمات</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Mobile Sidebar -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebarMobile">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">
+                    بانک ملی
+                </h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" title="close">
+                </button>
+            </div>
+
+            <div class="offcanvas-body">
+                <nav class="d-flex flex-column gap-2">
+                    <a href="./dashboard.html"
+                        class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>داشبورد</span>
+                    </a>
+
+                    <a href="./account.html"
+                        class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-wallet2"></i>
+                        <span>حساب ها</span>
+                    </a>
+
+                    <a href="./transfer.html"
+                        class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-arrow-left-right"></i>
+                        <span>انتقال وجه</span>
+                    </a>
+
+                    <a href="./transactions.html"
+                        class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <span>گردش حساب</span>
+                    </a>
+
+                    <a href="./reports.html"
+                        class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-file-earmark-text"></i>
+                        <span>گزارش ها</span>
+                    </a>
+
+                    <a href="./setting.html"
+                        class="nav-item active d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-gear"></i>
+                        <span>تنظیمات</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- یخش اصلی -->
+        <div class="d-flex flex-fill flex-column col-lg-8">
+            <!-- Header -->
+            <header
+                class="dashboard-header bg-white d-flex justify-content-between align-items-center py-0 px-4 top-0 position-sticky">
+                <div class="d-flex align-items-center gap-3">
+                    <button type="button" title="menuBtn" class="btn btn-light d-lg-none" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebarMobile">
+                        <i class="bi bi-list fs-4"></i>
+                    </button>
+
+                    <div class="header-search position-relative">
+                        <i class="bi bi-search position-absolute top-50"></i>
+                        <input type="text" placeholder="جستجو در خدمات" class="bg-white">
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <button class="header-btn border-0 bg-white" title="bellBtn" type="button">
+                        <i class="bi bi-bell"></i>
+                    </button>
+
+                    <button class="header-btn border-0 bg-white" title="envelopeBtn" type="button">
+                        <i class="bi bi-envelope"></i>
+                    </button>
+
+                    <div class="user-profile d-flex align-items-center">
+                        <img src="../assets/public/7699.jpg" alt="کاربر" class="rounded-circle object-fit-cover">
+                        <span class="d-none d-md-inline">
+                            جین دو
+                        </span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- بخش اصلی -->
+            <main class="dashboard-content">
+                <div class="container-fluid">
+                    <!-- هدر صفحه -->
+                    <div class="page-header mb-4">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                            <div>
+                                <h2 class="fw-bold mb-2">
+                                    تنظیمات
+                                </h2>
+
+                                <p class="text-muted mb-0">
+                                    مدیریت اطلاعات حساب کاربری و تنظیمات امنیتی
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body p-4">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <div
+                                        class="profile-avatar rounded-circle bg-white d-flex justify-content-center align-items-center fs-2 flex-shrink-0">
+                                        <img src="../assets/public/7699.jpg" alt="avatar" class="h-100 w-100 rounded-circle object-fit-cover">
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <h4 class="fw-bold mb-1">
+                                        جان دو
+                                    </h4>
+                                    <p class="text-muted mb-2">
+                                        آخرین ورود:
+                                        1405/04/15 - 14:22
+                                    </p>
+
+                                    <button type="button" class="btn btn-outline-primary">
+                                        <i class="bi bi-camera me-2"></i>
+                                        تغییر تصویر
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-4">
+                                اطلاعات شخصی
+                            </h5>
+
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">
+                                        نام
+                                    </label>
+
+                                    <input title="name" class="form-control" value="جان">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">
+                                        نام خانوادگی
+                                    </label>
+
+                                    <input title="lastName" class="form-control" value="دو">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">
+                                        شماره موبایل
+                                    </label>
+
+                                    <input title="phoneNumber" class="form-control" value="09xxxxxxxxx">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">
+                                        ایمیل
+                                    </label>
+
+                                    <input title="email" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                <div>
+                                    <h5 class="fw-bold">
+                                        امنیت حساب
+                                    </h5>
+
+                                    <p class="text-muted mb-0">
+                                        آخرین تغییر رمز:
+                                        1405/03/18
+                                    </p>
+                                </div>
+
+                                <button type="button" class="btn btn-primary-custom fw-semibold rounded-1 ms-1"
+                                    data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                                    تغییر رمز عبور
+                                </button>
+                            </div>
+
+                            <hr>
+
+                            <div class="form-check form-switch mt-3">
+                                <input title="2Lock" class="form-check-input" type="checkbox" checked>
+
+                                <label class="form-check-label">
+                                    ورود دو مرحله‌ای
+                                </label>
+                            </div>
+
+                            <div class="form-check form-switch mt-3">
+                                <input title="massege" class="form-check-input" type="checkbox" checked>
+
+                                <label class="form-check-label">
+                                    دریافت پیامک هنگام ورود
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-4">
+                                اعلان‌ها
+                            </h5>
+
+                            <div class="form-check form-switch mb-3">
+                                <input title="notif" class="form-check-input" type="checkbox" checked>
+
+                                <label class="form-check-label">
+                                    اعلان تراکنش
+                                </label>
+                            </div>
+
+                            <div class="form-check form-switch mb-3">
+                                <input title="SMS" class="form-check-input" type="checkbox" checked>
+
+                                <label class="form-check-label">
+                                    پیامک
+                                </label>
+                            </div>
+
+                            <div class="form-check form-switch">
+                                <input title="email" class="form-check-input" type="checkbox">
+
+                                <label class="form-check-label">
+                                    ایمیل
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-4">
+                                تنظیمات عمومی
+                            </h5>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="form-label">
+                                        زبان
+                                    </label>
+
+                                    <select title="language" class="form-select">
+                                        <option>
+                                            فارسی
+                                        </option>
+
+                                        <option>
+                                            English
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">
+                                        فرمت تاریخ
+                                    </label>
+
+                                    <select title="dateType" class="form-select">
+                                        <option>
+                                            شمسی
+                                        </option>
+
+                                        <option>
+                                            میلادی
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="fw-bold mb-0">
+                                    دستگاه‌های فعال
+                                </h5>
+
+                                <button class="btn btn-outline-danger">
+                                    خروج از همه دستگاه‌ها
+                                </button>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                دستگاه
+                                            </th>
+
+                                            <th>
+                                                مرورگر
+                                            </th>
+
+                                            <th>
+                                                آخرین فعالیت
+                                            </th>
+
+                                            <th>
+                                                وضعیت
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Windows 11
+                                            </td>
+
+                                            <td>
+                                                Chrome
+                                            </td>
+
+                                            <td>
+                                                امروز - 14:22
+                                            </td>
+
+                                            <td>
+                                                <span class="badge bg-success">
+                                                    دستگاه فعلی
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-end mb-5">
+                        <button class="btn btn-outline-secondary me-2">
+                            بازنشانی
+                        </button>
+
+                        <button class="btn btn-primary-custom fw-semibold rounded-1 ms-1 px-5">
+                            ذخیره تغییرات
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <!-- Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">
+                        تغییر رمز عبور
+                    </h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+
+                <!-- Body -->
+                <div class="modal-body">
+                    <form id="changePasswordForm">
+                        <!-- رمز جدید -->
+                        <div class="mb-3">
+                            <label class="form-label">
+                                رمز عبور جدید
+                            </label>
+
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="newPassword" placeholder="رمز جدید">
+
+                                <button class="btn btn-outline-secondary" type="button" id="toggleNewPassword">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+
+                            <small class="text-muted">
+                                حداقل ۸ کاراکتر شامل عدد و حروف
+                            </small>
+                        </div>
+
+                        <!-- تکرار رمز -->
+                        <div class="mb-3">
+                            <label class="form-label">
+                                تکرار رمز عبور
+                            </label>
+
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmPassword"
+                                    placeholder="تکرار رمز">
+
+                                <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- پیام خطا -->
+                        <div id="passwordError" class="text-danger small d-none">
+                            رمزها یکسان نیستند یا معتبر نیستند
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        انصراف
+                    </button>
+
+                    <button class="btn btn-primary-custom fw-semibold rounded-1 ms-1" id="submitPasswordChange">
+                        ثبت تغییر رمز
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/dashScript.js"></script>
+    <script>
+        function togglePassword(inputId, buttonId) {
+            const input =
+                document.getElementById(inputId);
+
+            const btn =
+                document.getElementById(buttonId);
+
+            btn.addEventListener("click", () => {
+
+                if (input.type === "password") {
+                    input.type = "text";
+
+                    btn.innerHTML = '<i class="bi bi-eye-slash"></i>';
+                } else {
+                    input.type = "password";
+
+                    btn.innerHTML = '<i class="bi bi-eye"></i>';
+                }
+            });
+        }
+
+        togglePassword("newPassword", "toggleNewPassword");
+        togglePassword("confirmPassword", "toggleConfirmPassword");
+
+        document.getElementById("submitPasswordChange")
+            .addEventListener("click", function () {
+                const newPass =
+                    document.getElementById("newPassword").value;
+
+                const confirmPass =
+                    document.getElementById("confirmPassword").value;
+
+                const error =
+                    document.getElementById("passwordError");
+
+                // reset error
+                error.classList.add("d-none");
+
+                // validation
+                if (newPass.length < 8) {
+                    error.textContent =
+                        "رمز باید حداقل ۸ کاراکتر باشد";
+
+                    error.classList.remove("d-none");
+                    return;
+                }
+
+                if (newPass !== confirmPass) {
+                    error.textContent =
+                        "رمزها یکسان نیستند";
+                    error.classList.remove("d-none");
+                    return;
+                }
+            });
+    </script>
+</body>
+
+</html>

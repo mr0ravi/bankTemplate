@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>bank meli</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm bg-white">
+        <div class="container">
+            <!-- لوگو -->
+            <a class="navbar-brand" href="#">
+                <img src="./assets/public/logo.png" alt="بانک ملی" width="50">
+            </a>
+
+            <!-- دکمه همبرگری برای موبایل -->
+            <button class="navbar-toggler fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- منو -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="./index.html">صفحه اصلی</a></li>
+                    <li class="nav-item dropdown dropdown-hover position-relative">
+                        <a class="nav-link fw-semibold dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            خدمات بانکی
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="./seporde.html">سپرده‌ها</a></li>
+                            <li><a class="dropdown-item" href="./facilities.html">تسهیلات و تعهدات</a></li>
+                            <li><a class="dropdown-item" href="./arzi.html">خدمات ارزی</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./other_khadamat.html">همه خدمات</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#">اطلاعات شعبه ها</a></li>
+                </ul>
+
+                <!-- دکمه های هدر -->
+                <div class="d-flex align-items-center">
+                    <a href="./internet_bank_login.html" class="btn btn-outline-custom fw-semibold rounded-1">ورود به
+                        اینترنت بانک</a>
+                    <a href="#" class="btn btn-primary-custom fw-semibold rounded-1 ms-1">همراه بانک</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- بخش اسلایدر -->
+    <section id="slider" class="hero-slider-section overflow-hidden">
+        <div id="heroServicesSlider" class="carousel slide carousel-fade" data-bs-ride="carousel"
+            data-bs-interval="5000">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroServicesSlider" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="اسلاید 1"></button>
+                <button type="button" data-bs-target="#heroServicesSlider" data-bs-slide-to="1"
+                    aria-label="اسلاید 2"></button>
+                <button type="button" data-bs-target="#heroServicesSlider" data-bs-slide-to="2"
+                    aria-label="اسلاید 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <!-- اسلاید افتتاح حساب -->
+                <div class="carousel-item active">
+                    <div class="hero-slide position-relative d-flex align-items-center first-slide">
+                        <div class="hero-overlay position-absolute"></div>
+                        <div class="container h-100">
+                            <div class="row h-100 align-items-center">
+                                <div class="col-lg-7">
+                                    <div class="hero-content position-relative text-white">
+                                        <span class="hero-badge d-inline-block text-white">خدمات ویژه بانک</span>
+                                        <h1 class="fw-bolder lh-base text-white">افتتاح حساب آنلاین در چند دقیقه</h1>
+                                        <p class="lh-lg">
+                                            بدون مراجعه حضوری، حساب بانکی خود را به‌صورت اینترنتی افتتاح کنید.
+                                        </p>
+                                        <div class="hero-buttons d-flex flex-wrap justify-content-lg-center">
+                                            <a href="#" class="btn btn-primary-custom fw-bold text-decoration-none rounded-1 ms-1">شروع
+                                                کنید</a>
+                                            <a href="#"
+                                                class="btn btn-outline-light-custom fw-bold text-decoration-none">اطلاعات
+                                                بیشتر</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- اسلاید انتقال وجه -->
+                <div class="carousel-item">
+                    <div class="hero-slide position-relative d-flex align-items-center second-slide">
+                        <div class="hero-overlay position-absolute"></div>
+                        <div class="container h-100">
+                            <div class="row h-100 align-items-center">
+                                <div class="col-lg-7">
+                                    <div class="hero-content position-relative text-white">
+                                        <span class="hero-badge d-inline-block text-white">انتقال وجه سریع</span>
+                                        <h1 class="fw-bolder lh-base text-white">امن، سریع و همیشه در دسترس</h1>
+                                        <p class="lh-lg">
+                                            انتقال وجه بین حساب‌ها و کارت‌ها با چند کلیک ساده.
+                                        </p>
+                                        <div class="hero-buttons d-flex flex-wrap justify-content-lg-center">
+                                            <a href="#"
+                                                class="btn btn-primary-custom fw-bold text-decoration-none rounded-1 ms-1">انتقال
+                                                وجه</a>
+                                            <a href="#"
+                                                class="btn btn-outline-light-custom fw-bold text-decoration-none">راهنما</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- اسلاید خدمات دیجیتال -->
+                <div class="carousel-item">
+                    <div class="hero-slide position-relative d-flex align-items-center third-slide">
+                        <div class="hero-overlay position-absolute"></div>
+                        <div class="container h-100">
+                            <div class="row h-100 align-items-center">
+                                <div class="col-lg-7">
+                                    <div class="hero-content position-relative text-white">
+                                        <span class="hero-badge d-inline-block text-white">خدمات دیجیتال</span>
+                                        <h1 class="fw-bolder lh-base text-white">همه خدمات بانکی در یک پنل</h1>
+                                        <p class="lh-lg">
+                                            بانکداری مدرن با تجربه‌ای ساده، سریع و کاربرپسند.
+                                        </p>
+                                        <div class="hero-buttons d-flex flex-wrap justify-content-lg-center">
+                                            <a href="#"
+                                                class="btn btn-primary-custom fw-bold text-decoration-none rounded-1 ms-1">مشاهده
+                                                خدمات</a>
+                                            <a href="#"
+                                                class="btn btn-outline-light-custom fw-bold text-decoration-none">بیشتر
+                                                بدانید</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroServicesSlider"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">قبلی</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroServicesSlider"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">بعدی</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="services-online py-5">
+        <div class="container">
+            <!-- بخش خدمات ویژه با تصویر -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div
+                        class="featured-service-card first-service d-flex position-relative align-items-center justify-content-center text-white overflow-hidden">
+                        <div class="overlay"></div>
+                        <h3 class="position-relative text-white">محاسبه شبا</h3>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div
+                        class="featured-service-card second-service d-flex position-relative align-items-center justify-content-center text-white overflow-hidden">
+                        <div class="overlay position-absolute top-0 end-0 w-100 h-100"></div>
+                        <h3 class="position-relative text-white">صندوق امانات</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- بخش خدمات پرکاربرد (مینیمال) -->
+            <div class="row g-3 justify-content-center">
+                <div class="col-6 col-md-2">
+                    <div class="mini-service-card bg-white text-center"><i class="bi bi-phone d-block"></i><span
+                            class="fw-bold">خرید شارژ</span></div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="mini-service-card bg-white text-center"><i class="bi bi-receipt d-block"></i><span
+                            class="fw-bold">پرداخت قبض</span></div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="mini-service-card bg-white text-center"><i class="bi bi-credit-card d-block"></i><span
+                            class="fw-bold">خدمات کارت</span></div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="mini-service-card bg-white text-center"><i
+                            class="bi bi-arrow-left-right d-block"></i><span class="fw-bold">انتقال وجه</span></div>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="mini-service-card bg-white text-center"><i class="bi bi-grid d-block"></i><span
+                            class="fw-bold">سایر خدمات</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section position-relative overflow-hidden">
+        <div class="news-container d-flex m-auto">
+            <!-- خبر اصلی با تصویر پیش‌فرض از اولین فایل -->
+            <div id="mainHero" class="featured-news-modern d-flex align-items-end position-relative">
+                <div class="glass-card">
+                    <h2 id="heroTitle">اخبار برگزیده</h2>
+                    <p id="heroDesc">برای مشاهده جزئیات، روی یکی از عناوین سمت راست کلیک کنید.</p>
+                </div>
+            </div>
+
+            <!-- لیست اخبار -->
+            <div class="news-feed-modern d-flex flex-column">
+                <div class="feed-item position-relative overflow-hidden"
+                    onmouseover="updateHero('./assets/public/bank_2.jpg', 'عنوان خبر اول', 'توضیحات مربوط به فایل اول در دایرکتوری داده‌ها.')">
+                    <h4>اخبار حوزه بانکداری</h4>
+                </div>
+                <div class="feed-item position-relative overflow-hidden"
+                    onmouseover="updateHero('./assets/public/bank_1.jpg', 'عنوان خبر دوم', 'توضیحات مربوط به فایل دوم در دایرکتوری داده‌ها.')">
+                    <h4>تکنولوژی‌های جدید شهر</h4>
+                </div>
+                <div class="feed-item position-relative overflow-hidden"
+                    onmouseover="updateHero('./assets/public/bank_3.jpg', 'عنوان خبر سوم', 'توضیحات مربوط به فایل سوم در دایرکتوری داده‌ها.')">
+                    <h4>اطلاعیه‌های عمومی</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="footer-inner d-flex align-items-center justify-content-between flex-wrap">
+                <!-- کپی رایت -->
+                <div class="footer-brand d-flex align-items-center flex-wrap">
+                    <span class="footer-copyright">
+                        © بانک ملی 1405،
+                    </span>
+                </div>
+
+                <!-- شبکه‌های اجتماعی -->
+                <ul class="social-list list-unstyled d-flex align-items-center p-0 m-0">
+                    <li>
+                        <a href="#"
+                            class="social-link d-inline-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                            aria-label="Instagram" title="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-icon"
+                                aria-hidden="true">
+                                <path
+                                    d="M8 0C5.8 0 5.5.01 4.7.05 3.8.09 3.3.22 2.8.42a4 4 0 0 0-1.4.92A4 4 0 0 0 .4 2.76C.2 3.27.1 3.85.05 4.7.01 5.5 0 5.8 0 8s.01 2.5.05 3.3c.05.85.16 1.43.37 1.94.2.52.48.97.92 1.41.45.45.9.72 1.42.93.51.2 1.09.33 1.94.37.8.04 1.1.05 3.3.05s2.5-.01 3.3-.05c.85-.04 1.43-.17 1.94-.37.52-.2.97-.48 1.41-.93.45-.45.72-.9.93-1.42.2-.51.33-1.09.37-1.94.04-.8.05-1.1.05-3.3s-.01-2.5-.05-3.3c-.04-.85-.17-1.43-.37-1.94a4 4 0 0 0-.93-1.41 4 4 0 0 0-1.41-.92c-.51-.2-1.09-.33-1.94-.37C10.5.01 10.2 0 8 0zm0 1.4c2.17 0 2.43.01 3.28.05.72.03 1.11.15 1.37.25.34.13.58.29.84.55.26.26.42.5.55.84.1.26.22.65.25 1.37.04.85.05 1.11.05 3.28s-.01 2.43-.05 3.28c-.03.72-.15 1.11-.25 1.37-.13.34-.29.58-.55.84-.26.26-.5.42-.84.55-.26.1-.65.22-1.37.25-.85.04-1.11.05-3.28.05s-2.43-.01-3.28-.05c-.72-.03-1.11-.15-1.37-.25a2.6 2.6 0 0 1-.84-.55 2.6 2.6 0 0 1-.55-.84c-.1-.26-.22-.65-.25-1.37C1.41 10.43 1.4 10.17 1.4 8s.01-2.43.05-3.28c.03-.72.15-1.11.25-1.37.13-.34.29-.58.55-.84.26-.26.5-.42.84-.55.26-.1.65-.22 1.37-.25.85-.04 1.11-.05 3.28-.05z" />
+                                <path
+                                    d="M8 3.9A4.1 4.1 0 1 0 8 12.1 4.1 4.1 0 0 0 8 3.9zm0 6.8A2.7 2.7 0 1 1 8 5.2a2.7 2.7 0 0 1 0 5.4z" />
+                                <circle cx="12.2" cy="3.8" r="1" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="social-link d-inline-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                            aria-label="Facebook" title="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-icon"
+                                aria-hidden="true">
+                                <path
+                                    d="M16 8.05A8 8 0 1 0 6.7 15.9v-5.6H4.7V8.05h2V6.3c0-2 1.2-3.1 3-3.1.9 0 1.8.16 1.8.16v2h-1c-1 0-1.3.6-1.3 1.2v1.5h2.2l-.35 2.25h-1.85v5.6A8 8 0 0 0 16 8.05z" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="social-link d-inline-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                            aria-label="Twitter" title="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-icon"
+                                aria-hidden="true">
+                                <path
+                                    d="M16 3.1a6.5 6.5 0 0 1-1.8.5 3.1 3.1 0 0 0 1.4-1.7c-.6.3-1.1.5-1.8.7a3 3 0 0 0-5.2 2.1c0 .2 0 .4.1.6A8.6 8.6 0 0 1 1 2.8a3 3 0 0 0 1 4 3 3 0 0 1-1.4-.4v.1a3 3 0 0 0 2.4 3 3 3 0 0 1-1.4 0 3 3 0 0 0 2.8 2.1A6.1 6.1 0 0 1 0 13a8.5 8.5 0 0 0 4.6 1.3c5.6 0 8.6-4.6 8.6-8.6V5a6.2 6.2 0 0 0 1.8-1.9z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

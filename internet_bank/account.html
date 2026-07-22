@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حساب ها</title>
+    <link rel="stylesheet" href="../css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-layout row m-0">
+        <!-- Sidebar Desktop -->
+        <aside class="sidebar d-none d-lg-block bg-white position-static top-0 col-lg-4">
+            <div class="sidebar-logo d-flex align-items-center gap-3 mb-5">
+                <img src="../assets/public/logo.png" alt="بانک ملی">
+                <span class="fs-5 fw-bold">بانک ملی</span>
+            </div>
+
+            <nav class="d-flex flex-column gap-2">
+                <a href="./dashboard.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>داشبورد</span>
+                </a>
+
+                <a href="./account.html"
+                    class="nav-item d-flex active align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-wallet2"></i>
+                    <span>حساب ها</span>
+                </a>
+
+                <a href="./transfer.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <span>انتقال وجه</span>
+                </a>
+
+                <a href="./transactions.html" class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <span>گردش حساب</span>
+                </a>
+
+                <a href="./reports.html" class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>گزارش ها</span>
+                </a>
+
+                <a href="./setting.html" class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-gear"></i>
+                    <span>تنظیمات</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Mobile Sidebar -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebarMobile">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">
+                    بانک ملی
+                </h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" title="close">
+                </button>
+            </div>
+
+            <div class="offcanvas-body">
+                <nav class="d-flex flex-column gap-2">
+                    <a href="./dashboard.html"
+                        class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>داشبورد</span>
+                    </a>
+
+                    <a href="./account.html"
+                        class="nav-item active d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-wallet2"></i>
+                        <span>حساب ها</span>
+                    </a>
+
+                    <a href="./transfer.html"
+                        class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-arrow-left-right"></i>
+                        <span>انتقال وجه</span>
+                    </a>
+
+                    <a href="./transactions.html" class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <span>گردش حساب</span>
+                    </a>
+
+                    <a href="./reports.html" class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-file-earmark-text"></i>
+                        <span>گزارش ها</span>
+                    </a>
+
+                    <a href="./setting.html" class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-gear"></i>
+                        <span>تنظیمات</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- یخش اصلی -->
+        <div class="d-flex flex-fill flex-column col-lg-8">
+            <!-- Header -->
+            <header
+                class="dashboard-header bg-white d-flex justify-content-between align-items-center py-0 px-4 top-0 position-sticky">
+                <div class="d-flex align-items-center gap-3">
+                    <button type="button" title="menuBtn" class="btn btn-light d-lg-none" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebarMobile">
+                        <i class="bi bi-list fs-4"></i>
+                    </button>
+
+                    <div class="header-search position-relative">
+                        <i class="bi bi-search position-absolute top-50"></i>
+                        <input type="text" placeholder="جستجو در خدمات" class="bg-white">
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <button class="header-btn border-0 bg-white" title="bellBtn" type="button">
+                        <i class="bi bi-bell"></i>
+                    </button>
+
+                    <button class="header-btn border-0 bg-white" title="envelopeBtn" type="button">
+                        <i class="bi bi-envelope"></i>
+                    </button>
+
+                    <div class="user-profile d-flex align-items-center">
+                        <img src="../assets/public/7699.jpg" alt="کاربر" class="rounded-circle object-fit-cover">
+                        <span class="d-none d-md-inline">
+                            جین دو
+                        </span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- بخش اصلی -->
+            <main class="dashboard-content">
+                <div class="container-fluid">
+                    <div class="page-header">
+                        <h1 class="fw-bolder">
+                            حساب های من
+                        </h1>
+
+                        <p>
+                            مشاهده و مدیریت حساب های بانکی
+                        </p>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- کارت -->
+                        <div class="col-lg-6">
+                            <div class="account-card h-100 p-4 bg-white">
+                                <div class="account-card-header d-flex justify-content-between align-items-center mb-4">
+                                    <div>
+                                        <span class="account-type d-inline-block">
+                                            سپرده کوتاه مدت
+                                        </span>
+
+                                        <h5 class="m-0 fw-bold">
+                                            6037 **** **** 4589
+                                        </h5>
+                                    </div>
+
+                                    <i class="bi bi-bank account-icon fs-2"></i>
+                                </div>
+
+                                <div class="account-balance mb-4">
+                                    <small class="d-block mb-2">
+                                        موجودی قابل برداشت
+                                    </small>
+
+                                    <strong class="fw-bolder fs-3">
+                                        850,000,000 ریال
+                                    </strong>
+                                </div>
+
+                                <div class="account-details py-3 px-0 mb-3">
+                                    <div>
+                                        <span class="d-block">
+                                            شماره شبا
+                                        </span>
+
+                                        <strong>
+                                            IR820170000...
+                                        </strong>
+                                    </div>
+                                </div>
+
+                                <div class="account-actions d-flex gap-3">
+                                    <button type="button" class="btn btn-outline-primary details-btn"
+                                        data-bs-toggle="modal" data-bs-target="#accountDetailsModal"
+                                        data-type="سپرده کوتاه مدت" data-account="0102547854"
+                                        data-card="6037 **** **** 4589" data-sheba="IR820170000000000000001"
+                                        data-open-date="1401/05/12" data-status="فعال" data-balance="850000000"
+                                        data-blocked="20000000">
+                                        جزئیات حساب
+                                    </button>
+
+                                    <button class="btn btn-primary-custom fw-semibold rounded-1 ms-1 transfer-btn" data-account="سپرده کوتاه مدت">
+                                        انتقال وجه
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- کارت -->
+                        <div class="col-lg-6">
+                            <div class="account-card h-100 p-4 bg-white">
+                                <div class="account-card-header d-flex justify-content-between align-items-center mb-4">
+                                    <div>
+                                        <span class="account-type d-inline-block">
+                                            حساب جاری
+                                        </span>
+
+                                        <h5 class="m-0 fw-bold">
+                                            6037 **** **** 9812
+                                        </h5>
+                                    </div>
+
+                                    <i class="bi bi-wallet2 account-icon fs-2"></i>
+                                </div>
+
+                                <div class="account-balance mb-4">
+                                    <small class="d-block mb-2">
+                                        موجودی قابل برداشت
+                                    </small>
+
+                                    <strong class="fw-bolder fs-3">
+                                        80,000,000 ریال
+                                    </strong>
+                                </div>
+
+                                <div class="account-details py-3 px-0 mb-3">
+                                    <div>
+                                        <span class="d-block">
+                                            شماره شبا
+                                        </span>
+
+                                        <strong>
+                                            IR820170000...
+                                        </strong>
+                                    </div>
+                                </div>
+
+                                <div class="account-actions d-flex gap-3">
+                                    <button type="button" class="btn btn-outline-primary details-btn"
+                                        data-bs-toggle="modal" data-bs-target="#accountDetailsModal"
+                                        data-type="حساب جاری" data-account="0157896321" data-card="6037 **** **** 9812"
+                                        data-sheba="IR820170000000000000002" data-open-date="1403/02/20"
+                                        data-status="فعال" data-balance="80000000" data-blocked="0">
+                                        جزئیات حساب
+                                    </button>
+
+                                    <button class="btn btn-primary-custom fw-semibold rounded-1 ms-1 transfer-btn" data-account="حساب جاری">
+                                        انتقال وجه
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal fade" id="accountDetailsModal" tabindex="-1" aria-labelledby="accountDetailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title fw-bold" id="accountDetailsModalLabel">
+                        جزئیات حساب
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="close">
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <!-- اطلاعات -->
+                        <div class="col-lg-5">
+                            <div class="account-detail-card text-center h-100">
+                                <div
+                                    class="account-detail-icon rounded-circle fs-2 d-flex justify-content-center align-items-center ms-auto me-auto mt-auto mb-3">
+                                    <i class="bi bi-bank2"></i>
+                                </div>
+
+                                <h5 id="detailAccountType" class="fw-bold mt-3"></h5>
+
+                                <div class="detail-list">
+                                    <div
+                                        class="detail-item d-flex justify-content-between align-items-center py-3 px-0">
+                                        <span>
+                                            شماره حساب
+                                        </span>
+
+                                        <strong id="modalAccountNumber"> - </strong>
+                                    </div>
+
+                                    <div
+                                        class="detail-item d-flex justify-content-between align-items-center py-3 px-0">
+                                        <span>
+                                            شماره کارت
+                                        </span>
+
+                                        <strong id="modalCardNumber"> - </strong>
+                                    </div>
+
+                                    <div
+                                        class="detail-item d-flex justify-content-between align-items-center py-3 px-0">
+                                        <span>
+                                            شماره شبا
+                                        </span>
+
+                                        <strong id="modalSheba"> - </strong>
+                                    </div>
+
+                                    <div
+                                        class="detail-item d-flex justify-content-between align-items-center py-3 px-0">
+                                        <span>
+                                            تاریخ افتتاح
+                                        </span>
+
+                                        <strong id="modalOpenDate"> - </strong>
+                                    </div>
+
+                                    <div
+                                        class="detail-item d-flex justify-content-between align-items-center py-3 px-0">
+                                        <span>
+                                            وضعیت
+                                        </span>
+
+                                        <span class="badge" id="modalStatus"> - </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- موجودی و تراکنش -->
+                        <div class="col-lg-7">
+                            <div class="balance-card text-white">
+                                <small>
+                                    موجودی قابل برداشت
+                                </small>
+
+                                <h2 class="mt-3 fw-bold" id="modalBalance"></h2>
+                            </div>
+
+                            <div class="mini-balance mt-4">
+                                <div class="detail-item">
+                                    <span>
+                                        موجودی مسدود
+                                    </span>
+
+                                    <strong id="modalBlockedBalance"> - </strong>
+                                </div>
+                            </div>
+
+                            <div class="mini-transactions mt-4 bg-white p-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h5 class="fw-bold mb-0">
+                                        آخرین تراکنش‌ها
+                                    </h5>
+
+                                    <a href="#" class="text-decoration-none">
+                                        مشاهده همه
+                                    </a>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    شرح
+                                                </th>
+
+                                                <th>
+                                                    تاریخ
+                                                </th>
+
+                                                <th>
+                                                    مبلغ
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="modalTransactions">
+                                            <tr>
+                                                <td colspan="3" class="text-center text-muted py-4">
+                                                    اطلاعاتی موجود نیست.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        بستن
+                    </button>
+
+                    <button type="button" class="btn btn-outline-primary">
+                        <i class="bi bi-download me-1"></i>
+                        دانلود صورتحساب
+                    </button>
+
+                    <button type="button" class="btn btn-primary-custom fw-semibold rounded-1 ms-1">
+                        <i class="bi bi-arrow-left-right me-1"></i>
+                        انتقال وجه
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/dashScript.js"></script>
+    <script>
+        document.querySelectorAll(".transfer-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                sessionStorage.setItem(
+                    "selectedSourceAccount",
+                    this.dataset.account
+                );
+                window.location.href = "./transfer.html";
+            });
+
+        });
+
+        const accountDetailsModal = document.getElementById("accountDetailsModal");
+        accountDetailsModal.addEventListener("show.bs.modal", function (event) {
+            const button = event.relatedTarget;
+            if (!button) return;
+
+            const accountType = button.dataset.type || "-";
+            const accountNumber = button.dataset.account || "-";
+            const cardNumber = button.dataset.card || "-";
+            const sheba = button.dataset.sheba || "-";
+            const openDate = button.dataset.openDate || "-";
+            const status = button.dataset.status || "-";
+            const balance = button.dataset.balance || "0";
+            const blocked = button.dataset.blocked || "0";
+
+            // قرار دادن اطلاعات داخل مودال
+            document.getElementById("detailAccountType").textContent = accountType;
+            document.getElementById("modalAccountNumber").textContent = accountNumber;
+            document.getElementById("modalCardNumber").textContent = cardNumber;
+            document.getElementById("modalSheba").textContent = sheba;
+            document.getElementById("modalOpenDate").textContent = openDate;
+            document.getElementById("modalBalance").textContent =
+                Number(balance).toLocaleString("fa-IR") + " ریال";
+            document.getElementById("modalBlockedBalance").textContent =
+                Number(blocked).toLocaleString("fa-IR") + " ریال";
+
+            // وضعیت حساب
+            const statusBadge = document.getElementById("modalStatus");
+            statusBadge.textContent = status;
+            statusBadge.className = "badge";
+            switch (status) {
+                case "فعال":
+                    statusBadge.classList.add("bg-success");
+                    break;
+
+                case "مسدود":
+                    statusBadge.classList.add("bg-danger");
+                    break;
+
+                case "غیرفعال":
+                    statusBadge.classList.add("bg-secondary");
+                    break;
+
+                case "در انتظار":
+                    statusBadge.classList.add("bg-warning", "text-dark");
+                    break;
+
+                default:
+                    statusBadge.classList.add("bg-light", "text-dark");
+                    break;
+            }
+
+            const transactionsBody =
+                document.getElementById("modalTransactions");
+
+            transactionsBody.innerHTML = `
+
+        <tr>
+
+            <td>
+                <i class="bi bi-arrow-down text-success"></i>
+                واریز حقوق
+            </td>
+
+            <td>
+                ۱۴۰۵/۰۴/۰۲
+            </td>
+
+            <td class="text-success">
+                +۲۵۰٬۰۰۰٬۰۰۰
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+                <i class="bi bi-arrow-up text-danger"></i>
+                انتقال وجه
+            </td>
+
+            <td>
+                ۱۴۰۵/۰۴/۰۱
+            </td>
+
+            <td class="text-danger">
+                -۵۰٬۰۰۰٬۰۰۰
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+                <i class="bi bi-arrow-up text-danger"></i>
+                پرداخت قبض
+            </td>
+
+            <td>
+                ۱۴۰۵/۰۳/۳۰
+            </td>
+
+            <td class="text-danger">
+                -۲٬۵۰۰٬۰۰۰
+            </td>
+
+        </tr>
+
+    `;
+
+        });
+    </script>
+</body>
+
+</html>

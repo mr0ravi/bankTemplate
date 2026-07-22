@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>انتقال وجه</title>
+    <link rel="stylesheet" href="../css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-layout row m-0">
+        <!-- Sidebar Desktop -->
+        <aside class="sidebar d-none d-lg-block bg-white position-static top-0 col-lg-4">
+            <div class="sidebar-logo d-flex align-items-center gap-3 mb-5">
+                <img src="../assets/public/logo.png" alt="بانک ملی">
+                <span class="fs-5 fw-bold">بانک ملی</span>
+            </div>
+
+            <nav class="d-flex flex-column gap-2">
+                <a href="./dashboard.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>داشبورد</span>
+                </a>
+
+                <a href="./account.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-wallet2"></i>
+                    <span>حساب ها</span>
+                </a>
+
+                <a href="./transfer.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <span>انتقال وجه</span>
+                </a>
+
+                <a href="./transactions.html"
+                    class="nav-item active d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <span>گردش حساب</span>
+                </a>
+
+                <a href="./reports.html" class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>گزارش ها</span>
+                </a>
+
+                <a href="./setting.html" class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-gear"></i>
+                    <span>تنظیمات</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Mobile Sidebar -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebarMobile">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">
+                    بانک ملی
+                </h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" title="close">
+                </button>
+            </div>
+
+            <div class="offcanvas-body">
+                <nav class="d-flex flex-column gap-2">
+                    <a href="./dashboard.html"
+                        class="nav-item active d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>داشبورد</span>
+                    </a>
+
+                    <a href="./account.html"
+                        class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-wallet2"></i>
+                        <span>حساب ها</span>
+                    </a>
+
+                    <a href="./transfer.html"
+                        class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-arrow-left-right"></i>
+                        <span>انتقال وجه</span>
+                    </a>
+
+                    <a href="./transactions.html"
+                        class="nav-item active d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <span>گردش حساب</span>
+                    </a>
+
+                    <a href="./reports.html" class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-file-earmark-text"></i>
+                        <span>گزارش ها</span>
+                    </a>
+
+                    <a href="./setting.html" class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-gear"></i>
+                        <span>تنظیمات</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main -->
+        <div class="d-flex flex-fill flex-column col-lg-8">
+            <!-- Header -->
+            <header
+                class="dashboard-header bg-white d-flex justify-content-between align-items-center py-0 px-4 top-0 position-sticky">
+                <div class="d-flex align-items-center gap-3">
+                    <button type="button" title="menuBtn" class="btn btn-light d-lg-none" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebarMobile">
+                        <i class="bi bi-list fs-4"></i>
+                    </button>
+
+                    <div class="header-search position-relative">
+                        <i class="bi bi-search position-absolute top-50"></i>
+                        <input type="text" placeholder="جستجو در خدمات" class="bg-white">
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <button class="header-btn border-0 bg-white" title="bellBtn" type="button">
+                        <i class="bi bi-bell"></i>
+                    </button>
+
+                    <button class="header-btn border-0 bg-white" title="envelopeBtn" type="button">
+                        <i class="bi bi-envelope"></i>
+                    </button>
+
+                    <div class="user-profile d-flex align-items-center">
+                        <img src="../assets/public/7699.jpg" alt="کاربر" class="rounded-circle object-fit-cover">
+                        <span class="d-none d-md-inline">
+                            جین دو
+                        </span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- بخش اصلی -->
+            <main class="dashboard-content">
+                <div class="container-fluid">
+                    <div class="page-header">
+                        <h1 class="fw-bolder">انتقال وجه</h1>
+
+                        <p>
+                            انتقال وجه بین حساب‌های داخلی و بین بانکی
+                        </p>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- فرم -->
+                        <div class="col-lg-8">
+                            <div class="dashboard-card bg-white p-4 h-100">
+                                <form id="transferForm">
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">
+                                                حساب مبدا
+                                            </label>
+
+                                            <select class="form-select" required title="formAccountSelect"
+                                                id="sourceAccount">
+                                                <option value="">
+                                                    انتخاب حساب
+                                                </option>
+
+                                                <option value="سپرده کوتاه مدت">
+                                                    سپرده کوتاه مدت
+                                                </option>
+
+                                                <option value="حساب جاری">
+                                                    حساب جاری
+                                                </option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">
+                                                نوع انتقال
+                                            </label>
+
+                                            <select class="form-select" required title="formTypeOfTransfer"
+                                                id="transferType">
+                                                <option value="">
+                                                    انتخاب نوع انتقال
+                                                </option>
+
+                                                <option value="کارت به کارت">
+                                                    کارت به کارت
+                                                </option>
+
+                                                <option value="پایا">
+                                                    پایا
+                                                </option>
+
+                                                <option value="ساتنا">
+                                                    ساتنا
+                                                </option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label class="form-label fw-semibold">
+                                                شماره حساب / شبا مقصد
+                                            </label>
+
+                                            <input type="text" class="form-control" required placeholder="مقصد"
+                                                id="destinationAccount">
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">
+                                                مبلغ (ریال)
+                                            </label>
+
+                                            <input type="number" class="form-control" required placeholder="مبلغ"
+                                                id="transferAmount">
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label class="form-label fw-semibold">
+                                                توضیحات
+                                            </label>
+
+                                            <textarea rows="4" class="form-control" placeholder="توضیحات">
+                                            </textarea>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <button type="submit"
+                                                class="btn btn-primary-custom fw-semibold rounded-1 ms-1">
+                                                ادامه فرآیند انتقال
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Account Info -->
+                        <div class="col-lg-4">
+                            <div class="dashboard-card bg-white p-4 h-100">
+                                <h4 class="mb-4">
+                                    اطلاعات حساب
+                                </h4>
+
+                                <div class="info-item d-flex justify-content-between align-items-center py-3 px-0">
+                                    <span>
+                                        موجودی قابل برداشت
+                                    </span>
+
+                                    <strong>
+                                        850,000,000 ریال
+                                    </strong>
+                                </div>
+
+                                <div class="info-item d-flex justify-content-between align-items-center py-3 px-0">
+                                    <span>
+                                        شماره حساب
+                                    </span>
+
+                                    <strong>
+                                        0102547854
+                                    </strong>
+                                </div>
+
+                                <div class="info-item d-flex justify-content-between align-items-center py-3 px-0">
+                                    <span>
+                                        شماره شبا
+                                    </span>
+
+                                    <strong>
+                                        ...IR820170
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal fade" id="transferConfirmModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        تایید اطلاعات انتقال
+                    </h5>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="closeBtn">
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="confirm-item d-flex justify-content-between align-items-center py-3 px-0">
+                        <span>حساب مبدا</span>
+
+                        <strong id="confirmSource">
+                            -
+                        </strong>
+                    </div>
+
+                    <div class="confirm-item d-flex justify-content-between align-items-center py-3 px-0">
+                        <span>نوع انتقال</span>
+
+                        <strong id="confirmTransferType">
+                            -
+                        </strong>
+                    </div>
+
+                    <div class="confirm-item d-flex justify-content-between align-items-center py-3 px-0">
+                        <span>حساب مقصد</span>
+
+                        <strong id="confirmDestination">
+                            -
+                        </strong>
+                    </div>
+
+                    <div class="confirm-item d-flex justify-content-between align-items-center py-3 px-0">
+                        <span>مبلغ</span>
+
+                        <strong id="confirmAmount">
+                            -
+                        </strong>
+                    </div>
+
+                    <div class="confirm-item d-flex justify-content-between align-items-center py-3 px-0">
+                        <span>کارمزد</span>
+
+                        <strong>
+                            10,000 ریال
+                        </strong>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        بازگشت
+                    </button>
+
+                    <button class="btn btn-primary" id="goToOtpBtn">
+                        تایید و ادامه
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="otpModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        تایید رمز پویا
+                    </h5>
+                </div>
+
+                <div class="modal-body text-center">
+                    <div class="otp-icon rounded-circle d-flex justify-content-center align-items-center fs-2">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+
+                    <h4 class="mb-3">
+                        کد تایید ارسال شد
+                    </h4>
+
+                    <p class="text-muted">
+                        کد ۶ رقمی ارسال شده به تلفن همراه خود را وارد نمایید.
+                    </p>
+
+                    <div class="otp-inputs d-flex justify-content-center">
+                        <input title="input1" type="text" maxlength="1" class="otp-input text-center fs-4 fw-bold">
+                        <input title="input2" type="text" maxlength="1" class="otp-input text-center fs-4 fw-bold">
+                        <input title="input3" type="text" maxlength="1" class="otp-input text-center fs-4 fw-bold">
+                        <input title="input4" type="text" maxlength="1" class="otp-input text-center fs-4 fw-bold">
+                        <input title="input5" type="text" maxlength="1" class="otp-input text-center fs-4 fw-bold">
+                        <input title="input6" type="text" maxlength="1" class="otp-input text-center fs-4 fw-bold">
+                    </div>
+
+                    <div class="otp-timer mt-3">
+                        ارسال مجدد تا
+
+                        <span id="otpTimer" class="fw-bold">
+                            120
+                        </span>
+
+                        ثانیه
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        انصراف
+                    </button>
+
+                    <button class="btn btn-primary" id="verifyOtpBtn">
+                        تایید رمز
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="receiptModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body receipt-body text-center">
+                    <div class="receipt-success mb-3">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+
+                    <h3 class="fw-bolder">
+                        انتقال با موفقیت انجام شد
+                    </h3>
+
+                    <p>
+                        تراکنش شما با موفقیت ثبت و پردازش گردید.
+                    </p>
+
+                    <div class="receipt-details mb-4 overflow-hidden">
+                        <div class="receipt-item d-flex justify-content-between">
+                            <span>شماره پیگیری</span>
+
+                            <strong id="receiptTracking">
+                                784512369
+                            </strong>
+                        </div>
+
+                        <div class="receipt-item d-flex justify-content-between">
+                            <span>مبلغ</span>
+
+                            <strong id="receiptAmount">
+                                -
+                            </strong>
+                        </div>
+
+                        <div class="receipt-item d-flex justify-content-between">
+                            <span>تاریخ</span>
+
+                            <strong id="receiptDate">
+                                -
+                            </strong>
+                        </div>
+
+                        <div class="receipt-item d-flex justify-content-between">
+                            <span>وضعیت</span>
+
+                            <strong class="text-success">
+                                موفق
+                            </strong>
+                        </div>
+                    </div>
+
+                    <div class="receipt-actions d-flex gap-3 justify-content-center flex-wrap">
+                        <button class="btn btn-outline-primary">
+                            <i class="bi bi-printer"></i>
+                            چاپ رسید
+                        </button>
+
+                        <button class="btn btn-outline-primary">
+                            <i class="bi bi-download"></i>
+
+                            دانلود PDF
+                        </button>
+                    </div>
+
+                    <a href="./dashboard.html" class="btn btn-primary-custom fw-semibold rounded-1 ms-1 w-100 mt-3">
+                        بازگشت به داشبورد
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/dashScript.js"></script>
+    <script>
+        const transferForm =
+            document.getElementById("transferForm");
+
+        transferForm.addEventListener(
+            "submit",
+            function (e) {
+                e.preventDefault();
+
+                const source =
+                    document.getElementById(
+                        "sourceAccount").value;
+                const type =
+                    document.getElementById(
+                        "transferType").value;
+                const destination =
+                    document.getElementById(
+                        "destinationAccount").value;
+                const amount =
+                    document.getElementById(
+                        "transferAmount").value;
+
+                if (
+                    !source ||
+                    !type ||
+                    !destination ||
+                    !amount
+                ) {
+
+                    alert(
+                        "تمام فیلدها را تکمیل کنید."
+                    );
+
+                    return;
+                }
+
+                document.getElementById(
+                    "confirmSource"
+                ).textContent = source;
+
+                document.getElementById(
+                    "confirmTransferType"
+                ).textContent = type;
+
+                document.getElementById(
+                    "confirmDestination"
+                ).textContent = destination;
+
+                document.getElementById(
+                    "confirmAmount"
+                ).textContent =
+                    Number(amount).toLocaleString()
+                    + " ریال";
+
+                const modal =
+                    new bootstrap.Modal(
+                        document.getElementById(
+                            "transferConfirmModal"
+                        )
+                    );
+
+                modal.show();
+            });
+
+        document
+            .getElementById("goToOtpBtn")
+            .addEventListener("click", function () {
+                const confirmModal =
+                    bootstrap.Modal.getInstance(
+                        document.getElementById(
+                            "transferConfirmModal"
+                        )
+                    );
+                confirmModal.hide();
+                const otpModal =
+                    new bootstrap.Modal(
+                        document.getElementById(
+                            "otpModal"
+                        )
+                    );
+
+                otpModal.show();
+                startOtpTimer();
+            });
+
+        function startOtpTimer() {
+            let time = 120;
+            const timerElement =
+                document.getElementById(
+                    "otpTimer"
+                );
+            const timer =
+                setInterval(() => {
+                    time--;
+                    timerElement.textContent =
+                        time;
+                    if (time <= 0) {
+                        clearInterval(timer);
+                        timerElement.textContent =
+                            "0";
+                    }
+                }, 1000);
+        }
+
+        const otpInputs =
+            document.querySelectorAll(".otp-input");
+
+        otpInputs.forEach((input, index) => {
+            input.addEventListener("input", () => {
+                input.value =
+                    input.value.replace(/[^0-9]/g, "");
+
+                if (
+                    input.value.length === 1 &&
+                    index < otpInputs.length - 1
+                ) {
+                    otpInputs[index + 1].focus();
+                }
+            });
+
+            input.addEventListener("keydown", (e) => {
+                if (
+                    e.key === "Backspace" &&
+                    input.value === "" &&
+                    index > 0
+                ) {
+                    otpInputs[index - 1].focus();
+                }
+            });
+        });
+
+        const otpModal =
+            document.getElementById("otpModal");
+
+        otpModal.addEventListener(
+            "shown.bs.modal",
+            () => {
+
+                document
+                    .querySelector(".otp-input")
+                    .focus();
+
+            });
+
+        document
+            .getElementById("verifyOtpBtn")
+            .addEventListener("click", () => {
+                const otpInputs =
+                    document.querySelectorAll(
+                        ".otp-input"
+                    );
+                let otpCode = "";
+                otpInputs.forEach(input => {
+                    otpCode += input.value;
+                });
+
+                if (otpCode.length !== 6) {
+                    alert(
+                        "رمز پویا را کامل وارد کنید."
+                    );
+                    return;
+                }
+
+                const amount =
+                    document.getElementById(
+                        "transferAmount"
+                    ).value;
+
+                document.getElementById(
+                    "receiptAmount"
+                ).textContent =
+                    Number(amount).toLocaleString()
+                    + " ریال";
+
+                document.getElementById(
+                    "receiptDate"
+                ).textContent =
+                    new Date().toLocaleString("fa-IR");
+
+                document.getElementById(
+                    "receiptTracking"
+                ).textContent =
+                    Math.floor(
+                        100000000 +
+                        Math.random() * 900000000
+                    );
+                const otpModal =
+                    bootstrap.Modal.getInstance(
+                        document.getElementById(
+                            "otpModal"
+                        )
+                    );
+                otpModal.hide();
+                const receiptModal =
+                    new bootstrap.Modal(
+                        document.getElementById(
+                            "receiptModal"
+                        )
+                    );
+                receiptModal.show();
+            });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const sourceAccount =
+                sessionStorage.getItem("selectedSourceAccount");
+
+            if (sourceAccount) {
+                document.getElementById("sourceAccount").value =
+                    sourceAccount;
+                sessionStorage.removeItem("selectedSourceAccount");
+            }
+
+            const transferType = sessionStorage.getItem("selectedTransferType");
+
+            if (transferType) {
+                document.getElementById("transferType").value = transferType;
+                sessionStorage.removeItem("selectedTransferType");
+            }
+        });
+    </script>
+</body>
+
+</html>

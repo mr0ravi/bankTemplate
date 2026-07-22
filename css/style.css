@@ -1,0 +1,1426 @@
+:root {
+  --primary-blue: #0052cc;
+  --secondary-blue: #6c757d;
+  --text-dark: #172b4d;
+  --bg-light: #f4f5f7;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazirmatn-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazirmatn-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazirmatn-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+}
+
+header {
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-dark) !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-blue) !important;
+}
+
+.btn-outline-custom {
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+  transition: all 0.3s;
+}
+
+.btn-outline-custom:hover {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.btn-primary-custom {
+  background: var(--primary-blue);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 14px;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 86, 179, 0.25);
+}
+
+.btn-primary-custom:hover {
+  background: var(--secondary-blue);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* استایل های dropdown */
+.dropdown-menu {
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  padding: 10px !important;
+  margin-top: 10px !important;
+  min-width: 220px;
+}
+
+.dropdown-item {
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  transition: 0.2s ease;
+  color: var(--text-dark) !important;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f7ff !important;
+  color: var(--primary-blue) !important;
+  padding-right: 25px !important;
+}
+
+.dropdown-divider {
+  border-top: 1px solid #eee;
+}
+
+.dropdown-hover .dropdown-menu {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.dropdown-hover:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-hover .dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-hover:hover .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+/* جلوگیری از تداخل Bootstrap */
+.dropdown-menu.show {
+  display: none;
+}
+
+/* استایل منوی موبایل */
+
+.navbar-toggler {
+  border: none;
+  color: var(--primary-blue);
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='%23007bff'%3e%3cpath stroke='rgba%280, 123, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* اسلایدر */
+
+.hero-slider-section {
+  width: 100%;
+}
+
+#heroServicesSlider {
+  width: 100%;
+}
+
+#heroServicesSlider .carousel-item {
+  height: 50vh;
+  min-height: 400px;
+}
+
+.first-slide {
+  background-image: url("../assets/public/bank_1.jpg");
+}
+
+.second-slide {
+  background-image: url("../assets/public/bank_3.jpg");
+}
+
+.third-slide {
+  background-image: url("../assets/public/bank_2.jpg");
+}
+
+.hero-slide {
+  width: 100%;
+  height: 50vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 27, 72, 0.82) 0%,
+    rgba(0, 27, 72, 0.55) 45%,
+    rgba(0, 27, 72, 0.15) 100%
+  );
+}
+
+.hero-content {
+  z-index: 2;
+  color: #fff;
+  max-width: 650px;
+  padding: 20px 0;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero-badge {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 18px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  margin-bottom: 18px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  gap: 14px;
+}
+
+.btn-outline-light-custom {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 14px;
+  transition: 0.3s ease;
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline-light-custom:hover {
+  background: #fff;
+  color: var(--primary-blue);
+  transform: translateY(-2px);
+}
+
+#heroServicesSlider .carousel-indicators {
+  bottom: 30px;
+  z-index: 5;
+}
+
+#heroServicesSlider .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.45;
+  margin: 0 6px;
+}
+
+#heroServicesSlider .carousel-indicators .active {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+#heroServicesSlider .carousel-control-prev,
+#heroServicesSlider .carousel-control-next {
+  width: 6%;
+}
+
+#heroServicesSlider .carousel-control-prev-icon,
+#heroServicesSlider .carousel-control-next-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  background-size: 55% 55%;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* سرویس ها */
+.services-online {
+  background-color: var(--bg-light);
+}
+
+/* کارت‌های تصویری بزرگ */
+.featured-service-card {
+  height: 200px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.featured-service-card h3 {
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.featured-service-card .overlay {
+  background: rgba(0, 82, 204, 0.6);
+  transition: 0.3s;
+}
+
+.featured-service-card:hover .overlay {
+  background: rgba(0, 82, 204, 0.3);
+}
+
+.first-service {
+  background-image: url("../assets/public/service_1.jpg");
+}
+
+.second-service {
+  background-image: url("../assets/public/service_2.webp");
+}
+
+/* کارت‌های مینیمال کوچک */
+.mini-service-card {
+  padding: 20px 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+.mini-service-card:hover {
+  border-color: var(--primary-blue);
+  transform: translateY(-5px);
+}
+
+.mini-service-card i {
+  font-size: 28px;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.mini-service-card span {
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+/* یخش اخبار */
+.news-section {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+.news-container {
+  gap: 30px;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* خبر اصلی */
+.featured-news-modern {
+  flex: 2;
+  border-radius: 40px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  transition: background 0.5s ease;
+  background-image: url("../assets/public/news_hero.jpeg");
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  padding: 30px;
+  margin: 25px;
+  color: var(--text-dark);
+  width: 80%;
+}
+
+/* لیست اخبار */
+.news-feed-modern {
+  flex: 1;
+  gap: 20px;
+}
+
+.feed-item {
+  padding: 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  background: var(--bg-light);
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feed-item:hover {
+  transform: translateX(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-blue);
+}
+
+/* footer */
+.custom-footer {
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  gap: 20px;
+}
+
+.footer-brand {
+  gap: 12px;
+}
+
+.footer-copyright {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.social-list {
+  gap: 10px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: var(--social-bg);
+  color: var(--text-muted);
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.social-link:hover {
+  background: var(--primary-blue);
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 123, 255, 0.25);
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* ===== استایل های صفحه سپرده ===== */
+
+/* Hero Section */
+.seporde-hero-section {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  color: #0e458b;
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+  border-bottom: 4px solid #0d6efd;
+}
+
+.seporde-hero-section > div > div {
+  max-width: 760px;
+}
+
+.seporde-hero-title {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  font-weight: 900;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.seporde-hero-text {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  line-height: 1.9;
+}
+
+/* Overview Section */
+.seporde-overview-section {
+  background-color: var(--bg-light);
+}
+.seporde-section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e3a8a;
+}
+.seporde-overview-section p {
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+/* کارت های سپرده */
+.seporde-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 20px !important;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.seporde-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.15);
+}
+
+.seporde-card-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(13, 110, 253, 0.1);
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.seporde-card-icon svg {
+  width: 40px;
+  height: 40px;
+  color: #0d6efd;
+}
+
+.seporde-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.seporde-card-text {
+  font-size: 0.95rem;
+  color: #6b7280;
+  min-height: 60px;
+}
+
+.btn.btn-seporde-outline-primary {
+  border-color: #0d6efd;
+  color: #0d6efd;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn.btn-seporde-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #ffffff;
+  border-color: #0d6efd;
+  transform: translateY(-3px);
+}
+
+/* یخش جزئیات */
+.seporde-detail-section {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.seporde-alt-bg {
+  background-color: #f1f5f9;
+}
+
+.seporde-detail-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+}
+
+.seporde-detail-text {
+  font-size: 1.05rem;
+  color: #4b5563;
+}
+
+.seporde-badge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.5em 1em;
+}
+
+.seporde-features-box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.seporde-features-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.seporde-features-box .text-muted {
+  font-size: 1rem;
+  color: #4b5563 !important;
+}
+
+.seporde-features-box strong {
+  color: #111827;
+}
+
+.seporde-features-box .py-3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.seporde-features-box .border-bottom {
+  border-bottom: 1px dashed #cbd5e0 !important;
+}
+
+.seporde-features-box .border-bottom:last-child {
+  border-bottom: none !important;
+}
+
+.seporde-image {
+  border-radius: 16px !important;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+}
+
+/* استایل های صفحه سپرده ها */
+.facilities-page-main {
+  background-color: var(--bg-light);
+}
+
+.facilities-page-hero {
+  background-color: var(--primary-blue);
+  background: linear-gradient(135deg, #0052cc, #003d99);
+}
+
+.facilities-page-section {
+  border-radius: 15px;
+  border: none;
+  scroll-margin-top: 100px;
+  transition: transform 0.3s ease;
+}
+
+.facilities-page-section:hover {
+  transform: translateY(-5px);
+}
+
+.badge {
+  padding: 10px 15px;
+}
+
+.accordion-button {
+  color: var(--primary-blue);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--primary-blue);
+  color: white;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  background-color: var(--bg-light);
+  border-bottom: 1px solid #dee2e6;
+  padding: 1.5rem 1.25rem;
+  color: #333;
+}
+
+.accordion-item {
+  border: 1px solid #dee2e6;
+  margin-bottom: 0.75rem;
+}
+
+.accordion-item:not(.accordion-button.collapsed) .accordion-header {
+  border-bottom: none;
+}
+
+/* خدمات ارزی */
+.arz-hero-span {
+  color: var(--primary-blue);
+}
+
+.card-bank {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-bank:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.card-bank i {
+  color: var(--primary-blue);
+}
+
+.btn-primary-bank {
+  background-color: var(--primary-blue);
+  padding: 10px 24px;
+  border-radius: 12px;
+  border: none;
+}
+
+.btn-primary-bank:hover {
+  background-color: #0045ac;
+  color: white;
+}
+
+.arz-page h1,
+.arz-page h2 {
+  color: var(--text-dark);
+}
+
+/* همه خدمات */
+.services-section {
+  margin-top: 40px;
+}
+
+.service-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+}
+
+.service-card .card-icon {
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 82, 204, 0.1),
+    rgba(0, 82, 204, 0.05)
+  );
+  border-radius: 0 0 50% 50%;
+}
+
+.service-card h5 {
+  color: var(--text-dark);
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: var(--secondary-blue);
+  line-height: 1.7;
+}
+
+/* استایل پاپ اپ ها */
+.service-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.service-popup.show {
+  opacity: 1;
+  display: flex;
+}
+
+.popup-content {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.popup-content h3 {
+  color: var(--primary-blue);
+  font-weight: 700;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 15px;
+}
+
+.popup-content p {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  color: #495057;
+  line-height: 1.8;
+}
+
+.popup-close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #ced4da;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.popup-close-btn:hover {
+  color: #dc3545;
+}
+
+/* استایل صفحه شعب */
+.branch-section {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.branch-header h2 {
+  color: var(--text-dark);
+  margin-bottom: 15px;
+}
+
+.branch-header .lead {
+  color: var(--secondary-blue);
+  margin-bottom: 40px;
+}
+
+.branch-search {
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.branch-search .input-group-text,
+.branch-search .form-control,
+.branch-search .form-select {
+  height: 52px;
+  border-color: #dee2e6;
+}
+
+.branch-search .form-control:focus,
+.branch-search .form-select:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 0.2rem rgba(0, 82, 204, 0.15);
+}
+
+.branch-search .input-group-text {
+  color: var(--primary-blue);
+}
+
+.branch-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.branch-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+}
+
+.branch-icon {
+  font-size: 3rem;
+  color: var(--primary-blue);
+  padding: 25px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 82, 204, 0.1),
+    rgba(0, 82, 204, 0.05)
+  );
+}
+
+.branch-body {
+  padding: 25px;
+}
+
+.branch-body h5 {
+  color: var(--text-dark);
+  margin-bottom: 15px;
+}
+
+.branch-body p {
+  color: var(--secondary-blue);
+  margin-bottom: 20px;
+}
+
+.phone-number {
+  direction: ltr;
+  unicode-bidi: isolate;
+  display: inline-block;
+}
+
+/* ورود به اینترنت بانک */
+.login-page {
+  background: linear-gradient(135deg, #eef3ff, #f6f8fc);
+}
+
+.login-left {
+  background: linear-gradient(135deg, var(--primary-blue), #003b99);
+}
+
+.login-left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/public/logo.png") center center no-repeat;
+  opacity: 0.06;
+}
+
+.security-box {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.custom-input {
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  transition: 0.2s;
+}
+
+.custom-input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.15);
+}
+
+.login-btn {
+  background: var(--primary-blue);
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.login-btn:hover {
+  background: #003b99;
+}
+
+/* لینک ها */
+.login-right a {
+  text-decoration: none;
+  color: var(--primary-blue);
+}
+
+/* ارور ها */
+.text-danger {
+  font-size: 12px;
+}
+
+/* همراه بانک */
+#hamrah-bank-page {
+  background-color: var(--bg-light);
+}
+
+#hamrah-bank-page section {
+  padding: 100px 0;
+}
+
+#hamrah-bank-page .hero-badge {
+  background-color: rgba(0, 82, 204, 0.08);
+  color: var(--primary-blue);
+}
+
+#hamrah-bank-page .hero-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: var(--text-dark);
+}
+
+#hamrah-bank-page .hero-title span {
+  color: var(--primary-blue);
+}
+
+#hamrah-bank-page .hero-description {
+  color: var(--secondary-blue);
+  margin-bottom: 2rem;
+}
+
+#hamrah-bank-page .hero-stats {
+  gap: 2rem;
+}
+
+#hamrah-bank-page .hero-stat-item strong {
+  color: var(--primary-blue);
+}
+
+#hamrah-bank-page .hero-stat-item span {
+  color: var(--secondary-blue);
+}
+
+#hamrah-bank-page .hero-phone {
+  max-width: 350px;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.15));
+}
+
+#hamrah-bank-page .floating-card {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+#hamrah-bank-page .floating-card i {
+  width: 50px;
+  height: 50px;
+  place-items: center;
+  background-color: rgba(0, 82, 204, 0.1);
+  color: var(--primary-blue);
+}
+
+#hamrah-bank-page .floating-card small {
+  color: var(--secondary-blue);
+}
+
+#hamrah-bank-page .floating-card strong {
+  color: var(--text-dark);
+}
+
+#hamrah-bank-page .card-balance {
+  top: 15%;
+  right: -30px;
+  z-index: 1;
+}
+
+#hamrah-bank-page .card-transfer {
+  bottom: 15%;
+  left: 0;
+}
+
+/* بخش فیچر */
+#hamrah-bank-page .section-header {
+  max-width: 700px;
+}
+
+.section-badge {
+  background-color: rgba(0, 82, 204, 0.08);
+  color: var(--primary-blue);
+}
+
+#hamrah-bank-page .section-title {
+  color: var(--text-dark);
+}
+
+#hamrah-bank-page .section-description {
+  color: var(--secondary-blue);
+  line-height: 1.8;
+}
+
+#hamrah-bank-page .feature-card {
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid #eef2f7;
+  transition: all 0.3s ease;
+}
+
+#hamrah-bank-page .feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 82, 204, 0.12);
+}
+
+#hamrah-bank-page .feature-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 82, 204, 0.1),
+    rgba(0, 82, 204, 0.03)
+  );
+}
+
+#hamrah-bank-page .feature-icon i {
+  font-size: 2rem;
+  color: var(--primary-blue);
+}
+
+#hamrah-bank-page .feature-card h5 {
+  color: var(--text-dark);
+}
+
+#hamrah-bank-page .feature-card p {
+  color: var(--secondary-blue);
+  line-height: 1.8;
+}
+
+/* بخش ویترین */
+#hamrah-bank-page .showcase-section {
+  background-color: var(--bg-light);
+}
+
+#hamrah-bank-page .showcase-phones {
+  min-height: 600px;
+}
+
+#hamrah-bank-page .showcase-phone {
+  width: 280px;
+  border-radius: 40px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+}
+
+#hamrah-bank-page .phone-main {
+  z-index: 2;
+}
+
+#hamrah-bank-page .phone-secondary {
+  top: 60px;
+  left: 40px;
+  transform: rotate(-12deg);
+  opacity: 0.9;
+}
+
+#hamrah-bank-page .showcase-description {
+  color: var(--secondary-blue);
+  margin: 2rem 0;
+}
+
+#hamrah-bank-page .section-title span {
+  color: var(--primary-blue);
+}
+
+#hamrah-bank-page .showcase-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(0, 82, 204, 0.1);
+}
+
+#hamrah-bank-page .showcase-icon i {
+  color: var(--primary-blue);
+}
+
+#hamrah-bank-page .showcase-item h6 {
+  color: var(--text-dark);
+}
+
+#hamrah-bank-page .showcase-item p {
+  color: var(--secondary-blue);
+  line-height: 1.8;
+}
+
+/* بخش امنیت */
+#hamrah-bank-page .security-section {
+  background: linear-gradient(135deg, var(--primary-blue), #003b99);
+}
+
+#hamrah-bank-page .security-wrapper {
+  padding: 5rem;
+  border-radius: 40px;
+}
+
+#hamrah-bank-page .security-badge {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#hamrah-bank-page .security-title span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#hamrah-bank-page .security-description {
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+
+#hamrah-bank-page .security-features {
+  gap: 2rem;
+}
+
+#hamrah-bank-page .security-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#hamrah-bank-page .security-item p {
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+#hamrah-bank-page .security-stats {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#hamrah-bank-page .security-stat-card {
+  background: rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 2rem;
+}
+
+#hamrah-bank-page .security-stat-card strong {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+#hamrah-bank-page .security-stat-card span {
+  opacity: 0.9;
+}
+
+/* بخش سوالات متداول صفحه همراه بانک */
+#hamrah-bank-page .faq-wrapper {
+  max-width: 900px;
+  margin: 4rem auto 0;
+}
+
+/* بخش دانلود */
+.download-section {
+  background-color: var(--bg-light);
+}
+
+.download-wrapper {
+  background: linear-gradient(135deg, var(--primary-blue), #003b99);
+  padding: 5rem;
+  border-radius: 40px;
+}
+
+.download-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -200px;
+  left: -200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.download-badge {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.download-description {
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+
+.btn-download {
+  border-radius: 18px;
+  min-width: 220px;
+}
+
+.btn-download small {
+  opacity: 0.8;
+}
+
+.download-stat span {
+  opacity: 0.85;
+}
+
+.download-phone {
+  max-width: 320px;
+  filter: drop-shadow(0 30px 50px rgba(0, 0, 0, 0.25));
+  border-radius: 2.75rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .seporde-hero-section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .seporde-detail-section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .service-card .card-icon {
+    font-size: 2.5rem;
+    padding: 15px;
+  }
+
+  .popup-content {
+    width: 95%;
+    padding: 30px;
+  }
+
+  .branch-search {
+    padding: 20px;
+  }
+
+  .branch-body {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #heroServicesSlider .carousel-item {
+    height: 80vh;
+    min-height: 600px;
+  }
+
+  .hero-slide {
+    height: 80vh;
+    min-height: 550px;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 1rem;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+    margin-top: 0.5rem;
+    border: none;
+    box-shadow: none;
+    padding-left: 1rem;
+  }
+
+  .dropdown-hover .dropdown-toggle {
+    pointer-events: auto;
+  }
+  .dropdown-hover .dropdown-menu {
+    display: none;
+  }
+  .dropdown-hover .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
+    display: block;
+  }
+
+  .social-list {
+    width: 100%;
+  }
+
+  .seporde-hero-text {
+    font-size: 1.1rem;
+  }
+
+  .seporde-detail-title {
+    font-size: 2rem;
+  }
+
+  .seporde-card-text {
+    min-height: 50px;
+  }
+
+  .hamrah-bank-page section {
+    padding: 70px 0;
+  }
+
+  .mobile-banking-page section {
+    padding: 70px 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .floating-card {
+    position: static;
+    max-width: 300px;
+  }
+
+  .showcase-phones {
+    min-height: auto;
+  }
+
+  .showcase-phone {
+    width: 240px;
+  }
+
+  .security-wrapper {
+    padding: 3rem 2rem;
+  }
+
+  .security-title {
+    font-size: 2rem;
+  }
+
+  .security-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .download-wrapper {
+    padding: 3rem 2rem;
+  }
+
+  .download-title {
+    font-size: 2rem;
+  }
+}

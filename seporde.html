@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seporde meli</title>
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm bg-white">
+        <div class="container">
+            <!-- لوگو -->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/public/logo.png" alt="بانک ملی" width="50">
+            </a>
+
+            <!-- دکمه همبرگری برای موبایل -->
+            <button class="navbar-toggler fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- منو -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="./index.html">صفحه اصلی</a></li>
+                    <li class="nav-item dropdown dropdown-hover position-relative">
+                        <a class="nav-link fw-semibold dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            خدمات بانکی
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="./seporde.html">سپرده‌ها</a></li>
+                            <li><a class="dropdown-item" href="./facilities.html">تسهیلات و تعهدات</a></li>
+                            <li><a class="dropdown-item" href="./arzi.html">خدمات ارزی</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./other_khadamat.html">همه خدمات</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="./information.html">اطلاعات شعبه ها</a>
+                    </li>
+                </ul>
+
+                <!-- دکمه های هدر -->
+                <div class="d-flex align-items-center">
+                    <a href="./internet_bank_login.html" class="btn btn-outline-custom fw-semibold rounded-1">ورود به
+                        اینترنت بانک</a>
+                    <a href="#" class="btn btn-primary-custom fw-semibold rounded-1 ms-1">همراه بانک</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="seporde-main overflow-x-hidden">
+
+        <!-- Hero -->
+        <section class="py-5 seporde-hero-section">
+            <div class="container py-4">
+                <div class="text-center mx-auto">
+                    <h1 class="seporde-hero-title fw-bold mb-3">سپرده‌های بانکی</h1>
+                    <p class="seporde-hero-text lead text-muted mb-0">
+                        با انواع سپرده‌های بانک شما آشنا شوید و متناسب با نیاز خود، بهترین گزینه را انتخاب کنید.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- معرفی سپرده ها -->
+        <section class="py-5 seporde-overview-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="seporde-section-title fw-bold mb-2">انواع سپرده‌ها</h2>
+                    <p class="text-muted mb-0">برای اطلاعات بیشتر روی هر مورد کلیک کنید.</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- کارت 1: سپرده کوتاه مدت -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="seporde-card bg-white overflow-hidden h-100 text-center p-4 rounded-4 shadow-sm">
+                            <div
+                                class="seporde-card-icon d-flex align-items-center justify-content-center mb-3 mx-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="w-6 h-6">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
+                                </svg>
+                            </div>
+                            <h3 class="seporde-card-title h5 fw-bold mb-3">سپرده کوتاه‌مدت</h3>
+                            <p class="seporde-card-text text-muted mb-4">
+                                مناسب برای نقدینگی سریع و دسترسی آسان به وجوه.
+                            </p>
+                            <a href="#short-term" class="btn btn-seporde-outline-primary rounded-pill px-4">جزئیات
+                                بیشتر</a>
+                        </div>
+                    </div>
+
+                    <!-- کارت 2: سپرده بلند مدت -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="seporde-card bg-white overflow-hidden h-100 text-center p-4 rounded-4 shadow-sm">
+                            <div
+                                class="seporde-card-icon d-flex align-items-center justify-content-center mb-3 mx-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="w-6 h-6">
+                                    <path
+                                        d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H6zm2 2h8v2H8V4zm0 4h8v2H8V6zm0 4h8v2H8v-2zm0 4h8v2H8v-2zm0 4h8v2H8v-2z" />
+                                </svg>
+                            </div>
+                            <h3 class="seporde-card-title h5 fw-bold mb-3">سپرده بلندمدت</h3>
+                            <p class="seporde-card-text text-muted mb-4">
+                                مناسب برای سرمایه‌گذاری مطمئن با بازدهی بالاتر در مدت زمان بیشتر.
+                            </p>
+                            <a href="#long-term" class="btn btn-seporde-outline-primary rounded-pill px-4">جزئیات
+                                بیشتر</a>
+                        </div>
+                    </div>
+
+                    <!-- کارت 3 : سپرده ارزی -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="seporde-card bg-white overflow-hidden h-100 text-center p-4 rounded-4 shadow-sm">
+                            <div
+                                class="seporde-card-icon d-flex align-items-center justify-content-center mb-3 mx-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="w-6 h-6">
+                                    <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <!-- Globe -->
+                                        <circle cx="12" cy="12" r="9"></circle>
+                                        <path d="M3 12h18"></path>
+                                        <path
+                                            d="M12 3c2.5 2.7 3.8 5.8 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.8-3.8-9S9.5 5.7 12 3z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h3 class="seporde-card-title h5 fw-bold mb-3">سپرده ارزی</h3>
+                            <p class="seporde-card-text text-muted mb-4">
+                                راهی امن برای نگهداری و مدیریت سرمایه به ارزهای بین‌المللی.
+                            </p>
+                            <a href="#currency" class="btn btn-seporde-outline-primary rounded-pill px-4">جزئیات
+                                بیشتر</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- سپرده کوتاه مدت -->
+        <section class="py-5 seporde-detail-section" id="short-term">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-12 col-lg-7 order-2 order-lg-1">
+                        <span class="seporde-badge badge text-bg-primary rounded-pill mb-3">سپرده کوتاه‌مدت</span>
+                        <h2 class="seporde-detail-title fw-bold mb-3">سپرده کوتاه‌مدت: انعطاف‌پذیری و دسترسی</h2>
+                        <p class="seporde-detail-text text-muted lh-lg mb-4">
+                            این نوع سپرده برای کسانی طراحی شده که به نقدینگی بالا و دسترسی آسان به موجودی خود نیاز
+                            دارند.
+                            با سپرده کوتاه‌مدت، سرمایه شما همیشه در دسترس است و می‌توانید بدون نگرانی هزینه‌های روزانه
+                            خود را مدیریت کنید.
+                        </p>
+                        <div class="seporde-features-box p-4 bg-white rounded-4 shadow-sm">
+                            <h4 class="seporde-features-title h5 fw-bold mb-3">ویژگی‌های کلیدی</h4>
+                            <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                                <span class="text-muted">مدت زمان</span>
+                                <strong>کوتاه‌مدت</strong>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                                <span class="text-muted">نرخ سود</span>
+                                <strong>متغیر (روز شمار)</strong>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center py-3">
+                                <span class="text-muted">امکان برداشت</span>
+                                <strong>آزاد</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5 order-1 order-lg-2">
+                        <img src="./assets/public/short_seporde.png" alt="تصویر سپرده کوتاه‌مدت"
+                            class="seporde-image img-fluid rounded-4 shadow-lg mb-2 mb-lg-0">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- سپرده بلند مدت -->
+        <section class="py-5 seporde-detail-section seporde-alt-bg" id="long-term">
+            <div class="container">
+                <div class="row align-items-center g-5 flex-lg-row-reverse">
+                    <div class="col-12 col-lg-7">
+                        <span class="seporde-badge badge text-bg-secondary rounded-pill mb-3">سپرده بلندمدت</span>
+                        <h2 class="seporde-detail-title fw-bold mb-3">سپرده بلندمدت: سود مطمئن و رشد سرمایه</h2>
+                        <p class="seporde-detail-text text-muted lh-lg mb-4">
+                            برای سرمایه‌گذاری مطمئن و دستیابی به بازدهی بیشتر، سپرده بلندمدت بهترین گزینه است.
+                            این سپرده در دوره‌های زمانی متنوعی قابل انتخاب است و به شما امکان می‌دهد تا سرمایه خود را در
+                            طول زمان رشد دهید.
+                        </p>
+                        <div class="seporde-features-box p-4 bg-white rounded-4 shadow-sm">
+                            <h4 class="seporde-features-title h5 fw-bold mb-3">ویژگی‌های کلیدی</h4>
+                            <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                                <span class="text-muted">مدت زمان</span>
+                                <strong>1 تا 5 سال</strong>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                                <span class="text-muted">نرخ سود</span>
+                                <strong>ثابت (با نرخ‌های متنوع)</strong>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center py-3">
+                                <span class="text-muted">ریسک</span>
+                                <strong>کم</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <img src="./assets/public/long_seporde.png" alt="تصویر سپرده بلندمدت"
+                            class="seporde-image img-fluid rounded-4 shadow-lg mb-2 mb-lg-0">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- سپرده ارزی -->
+        <section class="py-5 seporde-detail-section" id="currency">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-12 col-lg-7 order-2 order-lg-1">
+                        <span class="seporde-badge badge text-bg-info rounded-pill mb-3">سپرده ارزی</span>
+                        <h2 class="seporde-detail-title fw-bold mb-3">سپرده ارزی: مدیریت دارایی در بازارهای جهانی
+                        </h2>
+                        <p class="seporde-detail-text text-muted lh-lg mb-4">
+                            سپرده ارزی این امکان را به شما می‌دهد که سرمایه خود را به ارزهای معتبر بین‌المللی مانند دلار
+                            یا یورو نگهداری و مدیریت کنید.
+                            این سپرده، راهکاری مناسب برای حفظ ارزش دارایی در برابر نوسانات ارزی و سرمایه‌گذاری در
+                            بازارهای جهانی است.
+                        </p>
+                        <div class="seporde-features-box p-4 bg-white rounded-4 shadow-sm">
+                            <h4 class="seporde-features-title h5 fw-bold mb-3">ویژگی‌های کلیدی</h4>
+                            <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                                <span class="text-muted">واحد</span>
+                                <strong>ارزی (دلار، یورو و ...)</strong>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center py-3 border-bottom">
+                                <span class="text-muted">نرخ سود</span>
+                                <strong>طبق مقررات ارزی</strong>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center py-3">
+                                <span class="text-muted">کاربرد</span>
+                                <strong>حفظ ارزش و سرمایه‌گذاری</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5 order-1 order-lg-2">
+                        <img src="./assets/public/currency_seporde.png" alt="تصویر سپرده ارزی"
+                            class="seporde-image img-fluid rounded-4 shadow-lg mb-2 mb-lg-0">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="footer-inner d-flex align-items-center justify-content-between flex-wrap">
+                <!-- کپی رایت -->
+                <div class="footer-brand d-flex align-items-center flex-wrap">
+                    <span class="footer-copyright">
+                        © بانک ملی 1405،
+                    </span>
+                </div>
+
+                <!-- شبکه‌های اجتماعی -->
+                <ul class="social-list list-unstyled d-flex align-items-center p-0 m-0">
+                    <li>
+                        <a href="#"
+                            class="social-link d-inline-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                            aria-label="Instagram" title="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-icon"
+                                aria-hidden="true">
+                                <path
+                                    d="M8 0C5.8 0 5.5.01 4.7.05 3.8.09 3.3.22 2.8.42a4 4 0 0 0-1.4.92A4 4 0 0 0 .4 2.76C.2 3.27.1 3.85.05 4.7.01 5.5 0 5.8 0 8s.01 2.5.05 3.3c.05.85.16 1.43.37 1.94.2.52.48.97.92 1.41.45.45.9.72 1.42.93.51.2 1.09.33 1.94.37.8.04 1.1.05 3.3.05s2.5-.01 3.3-.05c.85-.04 1.43-.17 1.94-.37.52-.2.97-.48 1.41-.93.45-.45.72-.9.93-1.42.2-.51.33-1.09.37-1.94.04-.8.05-1.1.05-3.3s-.01-2.5-.05-3.3c-.04-.85-.17-1.43-.37-1.94a4 4 0 0 0-.93-1.41 4 4 0 0 0-1.41-.92c-.51-.2-1.09-.33-1.94-.37C10.5.01 10.2 0 8 0zm0 1.4c2.17 0 2.43.01 3.28.05.72.03 1.11.15 1.37.25.34.13.58.29.84.55.26.26.42.5.55.84.1.26.22.65.25 1.37.04.85.05 1.11.05 3.28s-.01 2.43-.05 3.28c-.03.72-.15 1.11-.25 1.37-.13.34-.29.58-.55.84-.26.26-.5.42-.84.55-.26.1-.65.22-1.37.25-.85.04-1.11.05-3.28.05s-2.43-.01-3.28-.05c-.72-.03-1.11-.15-1.37-.25a2.6 2.6 0 0 1-.84-.55 2.6 2.6 0 0 1-.55-.84c-.1-.26-.22-.65-.25-1.37C1.41 10.43 1.4 10.17 1.4 8s.01-2.43.05-3.28c.03-.72.15-1.11.25-1.37.13-.34.29-.58.55-.84.26-.26.5-.42.84-.55.26-.1.65-.22 1.37-.25.85-.04 1.11-.05 3.28-.05z" />
+                                <path
+                                    d="M8 3.9A4.1 4.1 0 1 0 8 12.1 4.1 4.1 0 0 0 8 3.9zm0 6.8A2.7 2.7 0 1 1 8 5.2a2.7 2.7 0 0 1 0 5.4z" />
+                                <circle cx="12.2" cy="3.8" r="1" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="social-link d-inline-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                            aria-label="Facebook" title="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-icon"
+                                aria-hidden="true">
+                                <path
+                                    d="M16 8.05A8 8 0 1 0 6.7 15.9v-5.6H4.7V8.05h2V6.3c0-2 1.2-3.1 3-3.1.9 0 1.8.16 1.8.16v2h-1c-1 0-1.3.6-1.3 1.2v1.5h2.2l-.35 2.25h-1.85v5.6A8 8 0 0 0 16 8.05z" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="social-link d-inline-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                            aria-label="Twitter" title="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-icon"
+                                aria-hidden="true">
+                                <path
+                                    d="M16 3.1a6.5 6.5 0 0 1-1.8.5 3.1 3.1 0 0 0 1.4-1.7c-.6.3-1.1.5-1.8.7a3 3 0 0 0-5.2 2.1c0 .2 0 .4.1.6A8.6 8.6 0 0 1 1 2.8a3 3 0 0 0 1 4 3 3 0 0 1-1.4-.4v.1a3 3 0 0 0 2.4 3 3 3 0 0 1-1.4 0 3 3 0 0 0 2.8 2.1A6.1 6.1 0 0 1 0 13a8.5 8.5 0 0 0 4.6 1.3c5.6 0 8.6-4.6 8.6-8.6V5a6.2 6.2 0 0 0 1.8-1.9z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

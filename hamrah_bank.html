@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>همراه بانک</title>
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm bg-white">
+        <div class="container">
+            <!-- لوگو -->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/public/logo.png" alt="بانک ملی" width="50">
+            </a>
+
+            <!-- دکمه همبرگری برای موبایل -->
+            <button class="navbar-toggler fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- منو -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="./index.html">صفحه اصلی</a></li>
+                    <li class="nav-item dropdown dropdown-hover position-relative">
+                        <a class="nav-link fw-semibold dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            خدمات بانکی
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="./seporde.html">سپرده‌ها</a></li>
+                            <li><a class="dropdown-item" href="./facilities.html">تسهیلات و تعهدات</a></li>
+                            <li><a class="dropdown-item" href="./arzi.html">خدمات ارزی</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./other_khadamat.html">همه خدمات</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="./information.html">اطلاعات شعبه ها</a>
+                    </li>
+                </ul>
+
+                <!-- دکمه های هدر -->
+                <div class="d-flex align-items-center">
+                    <a href="./internet_bank_login.html" class="btn btn-outline-custom fw-semibold rounded-1">ورود به
+                        اینترنت بانک</a>
+                    <a href="./hamrah_bank.html" class="btn btn-primary-custom fw-semibold rounded-1 ms-1">همراه
+                        بانک</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="hamrah-bank-page">
+        <!-- Hero Section -->
+        <section class="overflow-hidden">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <!-- محتوا -->
+                    <div class="col-lg-6">
+                        <span
+                            class="hero-badge d-inline-flex align-items-center gap-2 mb-4 px-3 py-2 rounded-pill fw-semibold">
+                            <i class="bi bi-phone"></i>
+                            نسخه جدید همراه بانک ملی
+                        </span>
+
+                        <h1 class="hero-title fw-bolder lh-sm mb-4">
+                            بانک همیشه
+                            <span>همراه شما</span>
+                        </h1>
+
+                        <p class="hero-description fs-6 lh-lg">
+                            مدیریت حساب‌ها، انتقال وجه، پرداخت قبوض و دسترسی به خدمات بانکی
+                            تنها با چند لمس ساده در هر زمان و هر مکان.
+                        </p>
+
+                        <div class="d-flex flex-wrap mb-5 gap-3">
+                            <a href="#" class="btn btn-primary-custom fw-semibold rounded-1 ms-1">
+                                <i class="bi bi-android2"></i>
+                                دانلود اندروید
+                            </a>
+                            <a href="#" class="btn btn-outline-custom">
+                                <i class="bi bi-apple"></i>
+                                دانلود iOS
+                            </a>
+                        </div>
+
+                        <div class="hero-stats d-flex flex-wrap justify-content-lg-center">
+                            <div class="hero-stat-item d-flex flex-column">
+                                <strong class="fs-4">+۱ میلیون</strong>
+                                <span>کاربر فعال</span>
+                            </div>
+
+                            <div class="hero-stat-item d-flex flex-column">
+                                <strong class="fs-4">۲۴/۷</strong>
+                                <span>دسترسی آنلاین</span>
+                            </div>
+
+                            <div class="hero-stat-item d-flex flex-column">
+                                <strong class="fs-4">۱۰۰٪</strong>
+                                <span>تراکنش امن</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- تصویر -->
+                    <div class="col-lg-6">
+                        <div class="position-relative text-center mt-lg-5">
+                            <div
+                                class="floating-card card-balance position-absolute d-flex align-items-center gap-3 p-3 bg-white rounded-4 mx-lg-auto my-lg-3">
+                                <i class="bi bi-wallet2 d-grid rounded-circle fs-3"></i>
+                                <div>
+                                    <small class="d-block">موجودی حساب</small>
+                                    <strong>۱۲۵,۰۰۰,۰۰۰ ریال</strong>
+                                </div>
+                            </div>
+
+                            <img src="./assets/public/hamrah_bank.png" alt="همراه بانک ملی"
+                                class="img-fluid hero-phone">
+
+                            <div
+                                class="floating-card card-transfer position-absolute d-flex align-items-center gap-3 p-3 bg-white rounded-4">
+                                <i class="bi bi-arrow-left-right d-grid rounded-circle fs-3"></i>
+                                <div>
+                                    <small class="d-block">انتقال وجه</small>
+                                    <strong>موفق</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- فیچر ها -->
+        <section class="features-section bg-white">
+            <div class="container">
+                <div class="section-header text-center my-0 mx-auto">
+                    <span class="section-badge d-inline-block py-2 px-3 rounded-circle fw-semibold mb-3">
+                        خدمات همراه بانک
+                    </span>
+                    <h2 class="section-title fw-bolder fs-1 mb-3">
+                        همه خدمات بانکی در دستان شما
+                    </h2>
+                    <p class="section-description">
+                        بدون مراجعه حضوری، تنها با چند لمس ساده به خدمات مورد نیاز خود دسترسی داشته باشید.
+                    </p>
+                </div>
+
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card bg-white h-100 text-center">
+                            <div class="feature-icon d-flex align-items-center justify-content-center">
+                                <i class="bi bi-arrow-left-right"></i>
+                            </div>
+                            <h5 class="fw-bold mb-1">انتقال وجه</h5>
+                            <p class="mb-0">
+                                انتقال وجه کارت به کارت و بین حساب‌های شخصی به صورت سریع و ایمن.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card bg-white h-100 text-center">
+                            <div class="feature-icon d-flex align-items-center justify-content-center">
+                                <i class="bi bi-wallet2"></i>
+                            </div>
+                            <h5 class="fw-bold mb-1">مدیریت حساب‌ها</h5>
+                            <p class="mb-0">
+                                مشاهده موجودی، گردش حساب و مدیریت کامل سپرده‌ها.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card bg-white h-100 text-center">
+                            <div class="feature-icon d-flex align-items-center justify-content-center">
+                                <i class="bi bi-credit-card"></i>
+                            </div>
+                            <h5 class="fw-bold mb-1">خدمات کارت</h5>
+                            <p class="mb-0">
+                                فعال‌سازی، مسدودسازی و مدیریت کارت‌های بانکی.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card bg-white h-100 text-center">
+                            <div class="feature-icon d-flex align-items-center justify-content-center">
+                                <i class="bi bi-receipt"></i>
+                            </div>
+                            <h5 class="fw-bold mb-1">پرداخت قبوض</h5>
+                            <p class="mb-0">
+                                پرداخت قبوض خدماتی بدون نیاز به مراجعه حضوری.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card bg-white h-100 text-center">
+                            <div class="feature-icon d-flex align-items-center justify-content-center">
+                                <i class="bi bi-phone"></i>
+                            </div>
+                            <h5 class="fw-bold mb-1">خرید شارژ</h5>
+                            <p class="mb-0">
+                                خرید شارژ و بسته اینترنت برای تمامی اپراتورها.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card bg-white h-100 text-center">
+                            <div class="feature-icon d-flex align-items-center justify-content-center">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <h5 class="fw-bold mb-1">گزارش‌های مالی</h5>
+                            <p class="mb-0">
+                                مشاهده و تحلیل تراکنش‌ها و گزارش‌های مالی شخصی.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش ویترین -->
+        <section class="showcase-section">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <!-- تصاویر -->
+                    <div class="col-lg-6">
+                        <div class="showcase-phones position-relative d-flex justify-content-center align-items-center">
+                            <img src="./assets/public/app-screen-1.png" alt="داشبورد همراه بانک"
+                                class="showcase-phone phone-main position-relative">
+
+                            <img src="./assets/public/app-screen-2.png" alt="انتقال وجه"
+                                class="showcase-phone phone-secondary position-absolute d-lg-block d-none">
+                        </div>
+                    </div>
+
+                    <!-- محتوا -->
+                    <div class="col-lg-6">
+                        <span class="section-badge d-inline-block py-2 px-3 rounded-circle fw-semibold mb-3">
+                            تجربه‌ای متفاوت
+                        </span>
+
+                        <h2 class="section-title fw-bolder fs-1 mb-3">
+                            طراحی شده برای سرعت،
+                            <span>سادگی و امنیت</span>
+                        </h2>
+
+                        <p class="showcase-description lh-lg">
+                            همراه بانک ملی با رابط کاربری مدرن و دسترسی سریع به خدمات بانکی،
+                            تجربه‌ای ساده و روان را برای شما فراهم می‌کند.
+                        </p>
+
+                        <div class="d-flex flex-column gap-4">
+                            <div class="showcase-item d-flex gap-3 align-items-start">
+                                <div
+                                    class="showcase-icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <i class="bi bi-lightning-charge-fill fs-2"></i>
+                                </div>
+
+                                <div>
+                                    <h6 class="fw-bold mb-2">دسترسی سریع</h6>
+                                    <p class="m-0">
+                                        انجام عملیات بانکی تنها در چند ثانیه.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="showcase-item d-flex gap-3 align-items-start">
+                                <div
+                                    class="showcase-icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <i class="bi bi-shield-check fs-2"></i>
+                                </div>
+
+                                <div>
+                                    <h6 class="fw-bold mb-2">امنیت پیشرفته</h6>
+                                    <p class="m-0">
+                                        حفاظت از اطلاعات با استفاده از استانداردهای روز.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="showcase-item d-flex gap-3 align-items-start">
+                                <div
+                                    class="showcase-icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <i class="bi bi-grid-1x2-fill fs-2"></i>
+                                </div>
+
+                                <div>
+                                    <h6 class="fw-bold mb-2">رابط کاربری مدرن</h6>
+                                    <p class="m-0">
+                                        طراحی ساده و مناسب برای تمامی کاربران.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="security-section">
+            <div class="container">
+                <div class="security-wrapper text-white">
+                    <div class="row align-items-center gy-5">
+                        <!-- متن -->
+                        <div class="col-lg-6">
+                            <span
+                                class="security-badge text-white d-inline-block py-2 px-3 rounded-circle fw-semibold mb-3">
+                                امنیت اطلاعات
+                            </span>
+
+                            <h2 class="security-title fs-1 fw-bolder my-4 mx-0 lh-base">
+                                حفاظت از دارایی‌های شما،
+                                <span>اولویت ماست</span>
+                            </h2>
+
+                            <p class="security-description lh-lg">
+                                همراه بانک ملی با بهره‌گیری از جدیدترین فناوری‌های امنیتی،
+                                محیطی مطمئن برای انجام تمامی خدمات بانکی فراهم کرده است.
+                            </p>
+
+                            <div class="security-features d-flex flex-column">
+                                <div class="security-item d-flex gap-3">
+                                    <div
+                                        class="security-icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                        <i class="bi bi-shield-check fs-3 text-white"></i>
+                                    </div>
+
+                                    <div>
+                                        <h6 class="fw-bold mb-2">رمزنگاری پیشرفته</h6>
+                                        <p class="m-0">
+                                            محافظت از اطلاعات کاربران با استانداردهای روز دنیا.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="security-item d-flex gap-3">
+                                    <div
+                                        class="security-icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                        <i class="bi bi-key fs-3 text-white"></i>
+                                    </div>
+
+                                    <div>
+                                        <h6 class="fw-bold mb-2">رمز پویا</h6>
+                                        <p class="m-0">
+                                            افزایش امنیت تراکنش‌های بانکی با استفاده از رمز یکبار مصرف.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="security-item d-flex gap-3">
+                                    <div
+                                        class="security-icon d-flex align-items-center justify-content-center flex-shrink-0">
+                                        <i class="bi bi-clock-history fs-3 text-white"></i>
+                                    </div>
+
+                                    <div>
+                                        <h6 class="fw-bold mb-2">خروج خودکار</h6>
+                                        <p class="m-0">
+                                            خروج خودکار از حساب در صورت عدم فعالیت کاربر.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- آمار -->
+                        <div class="col-lg-6">
+                            <div class="security-stats d-grid gap-4">
+                                <div class="security-stat-card text-center">
+                                    <strong class="d-block">۲۴/۷</strong>
+                                    <span>
+                                        پایش امنیتی مداوم
+                                    </span>
+                                </div>
+
+                                <div class="security-stat-card text-center">
+                                    <strong class="d-block">۱۰۰٪</strong>
+                                    <span>
+                                        ارتباط رمزنگاری شده
+                                    </span>
+                                </div>
+
+                                <div class="security-stat-card text-center">
+                                    <strong class="d-block">OTP</strong>
+                                    <span>
+                                        پشتیبانی از رمز پویا
+                                    </span>
+                                </div>
+
+                                <div class="security-stat-card text-center">
+                                    <strong class="d-block">SSL</strong>
+                                    <span>
+                                        انتقال امن اطلاعات
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white">
+            <div class="container">
+                <div class="section-header text-center my-0 mx-auto">
+                    <span class="section-badge d-inline-block py-2 px-3 rounded-circle fw-semibold mb-3">
+                        سوالات متداول
+                    </span>
+
+                    <h2 class="section-title fw-bolder fs-1 mb-3">
+                        پاسخ به سوالات پرتکرار کاربران
+                    </h2>
+
+                    <p class="section-description">
+                        پاسخ برخی از سوالات رایج درباره همراه بانک ملی.
+                    </p>
+                </div>
+
+                <div class="faq-wrapper">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqOne">
+                                    چگونه همراه بانک را فعال کنم؟
+                                </button>
+                            </h2>
+
+                            <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    پس از نصب برنامه، با استفاده از نام کاربری و اطلاعات هویتی
+                                    خود می‌توانید همراه بانک را فعال نمایید.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqTwo">
+                                    در صورت فراموشی رمز عبور چه کاری انجام دهم؟
+                                </button>
+                            </h2>
+
+                            <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    از گزینه «بازیابی رمز عبور» در صفحه ورود استفاده کنید
+                                    یا به یکی از شعب بانک مراجعه نمایید.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqThree">
+                                    آیا استفاده از همراه بانک هزینه دارد؟
+                                </button>
+                            </h2>
+
+                            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    استفاده از همراه بانک رایگان است و تنها هزینه‌های
+                                    متعارف تراکنش‌های بانکی اعمال خواهد شد.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faqFour">
+                                    آیا همراه بانک از رمز پویا پشتیبانی می‌کند؟
+                                </button>
+                            </h2>
+
+                            <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    بله، تمامی تراکنش‌های حساس از رمز پویا و لایه‌های
+                                    امنیتی پیشرفته پشتیبانی می‌کنند.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="download-section">
+            <div class="container">
+                <div class="download-wrapper text-white position-relative overflow-hidden">
+                    <div class="row align-items-center gy-5">
+                        <!-- محتوا -->
+                        <div class="col-lg-7">
+                            <span
+                                class="download-badge d-inline-flex align-items-center gap-2 mb-4 px-3 py-2 rounded-pill">
+                                <i class="bi bi-download"></i>
+                                دانلود همراه بانک
+                            </span>
+
+                            <h2 class="download-title fs-1 fw-bolder mb-4 lh-base">
+                                همین حالا همراه بانک ملی را نصب کنید
+                            </h2>
+
+                            <p class="download-description lh-lg">
+                                به خدمات بانکی خود در هر زمان و هر مکان دسترسی داشته باشید.
+                                انتقال وجه، مدیریت حساب‌ها، پرداخت قبوض و ده‌ها خدمت دیگر
+                                تنها با چند لمس ساده.
+                            </p>
+
+                            <div class="d-flex flex-wrap gap-3 mb-4 justify-content-lg-center">
+                                <a href="#"
+                                    class="btn btn-light btn-download d-flex align-items-center gap-3 px-4 py-3">
+                                    <i class="bi bi-android2 fs-2"></i>
+                                    <div>
+                                        <small class="d-block">دانلود برای</small>
+                                        <strong class="d-block fs-6">Android</strong>
+                                    </div>
+                                </a>
+
+                                <a href="#"
+                                    class="btn btn-outline-light btn-download d-flex align-items-center gap-3 px-4 py-3">
+                                    <i class="bi bi-apple fs-2"></i>
+                                    <div>
+                                        <small class="d-block">دانلود برای</small>
+                                        <strong class="d-block fs-2">iOS</strong>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-5 justify-content-lg-center">
+                                <div class="download-stat d-flex flex-column">
+                                    <strong class="fw-bold fs-2">+۱ میلیون</strong>
+                                    <span>کاربر فعال</span>
+                                </div>
+
+                                <div class="download-stat d-flex flex-column">
+                                    <strong class="fw-bold fs-2">۴.۹</strong>
+                                    <span>امتیاز کاربران</span>
+                                </div>
+
+                                <div class="download-stat d-flex flex-column">
+                                    <strong class="fw-bold fs-2">۲۴/۷</strong>
+                                    <span>دسترسی آنلاین</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- تصویر -->
+                        <div class="col-lg-5 text-center">
+                            <img src="./assets/public/app-screen-1.png" alt="دانلود همراه بانک"
+                                class="img-fluid download-phone">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="footer-inner d-flex align-items-center justify-content-between flex-wrap">
+                <!-- کپی رایت -->
+                <div class="footer-brand d-flex align-items-center flex-wrap">
+                    <span class="footer-copyright">
+                        © بانک ملی 1405،
+                    </span>
+                </div>
+
+                <!-- شبکه‌های اجتماعی -->
+                <ul class="social-list list-unstyled d-flex align-items-center p-0 m-0">
+                    <li>
+                        <a href="#"
+                            class="social-link d-inline-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                            aria-label="Instagram" title="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-icon"
+                                aria-hidden="true">
+                                <path
+                                    d="M8 0C5.8 0 5.5.01 4.7.05 3.8.09 3.3.22 2.8.42a4 4 0 0 0-1.4.92A4 4 0 0 0 .4 2.76C.2 3.27.1 3.85.05 4.7.01 5.5 0 5.8 0 8s.01 2.5.05 3.3c.05.85.16 1.43.37 1.94.2.52.48.97.92 1.41.45.45.9.72 1.42.93.51.2 1.09.33 1.94.37.8.04 1.1.05 3.3.05s2.5-.01 3.3-.05c.85-.04 1.43-.17 1.94-.37.52-.2.97-.48 1.41-.93.45-.45.72-.9.93-1.42.2-.51.33-1.09.37-1.94.04-.8.05-1.1.05-3.3s-.01-2.5-.05-3.3c-.04-.85-.17-1.43-.37-1.94a4 4 0 0 0-.93-1.41 4 4 0 0 0-1.41-.92c-.51-.2-1.09-.33-1.94-.37C10.5.01 10.2 0 8 0zm0 1.4c2.17 0 2.43.01 3.28.05.72.03 1.11.15 1.37.25.34.13.58.29.84.55.26.26.42.5.55.84.1.26.22.65.25 1.37.04.85.05 1.11.05 3.28s-.01 2.43-.05 3.28c-.03.72-.15 1.11-.25 1.37-.13.34-.29.58-.55.84-.26.26-.5.42-.84.55-.26.1-.65.22-1.37.25-.85.04-1.11.05-3.28.05s-2.43-.01-3.28-.05c-.72-.03-1.11-.15-1.37-.25a2.6 2.6 0 0 1-.84-.55 2.6 2.6 0 0 1-.55-.84c-.1-.26-.22-.65-.25-1.37C1.41 10.43 1.4 10.17 1.4 8s.01-2.43.05-3.28c.03-.72.15-1.11.25-1.37.13-.34.29-.58.55-.84.26-.26.5-.42.84-.55.26-.1.65-.22 1.37-.25.85-.04 1.11-.05 3.28-.05z" />
+                                <path
+                                    d="M8 3.9A4.1 4.1 0 1 0 8 12.1 4.1 4.1 0 0 0 8 3.9zm0 6.8A2.7 2.7 0 1 1 8 5.2a2.7 2.7 0 0 1 0 5.4z" />
+                                <circle cx="12.2" cy="3.8" r="1" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="social-link d-inline-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                            aria-label="Facebook" title="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-icon"
+                                aria-hidden="true">
+                                <path
+                                    d="M16 8.05A8 8 0 1 0 6.7 15.9v-5.6H4.7V8.05h2V6.3c0-2 1.2-3.1 3-3.1.9 0 1.8.16 1.8.16v2h-1c-1 0-1.3.6-1.3 1.2v1.5h2.2l-.35 2.25h-1.85v5.6A8 8 0 0 0 16 8.05z" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="social-link d-inline-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                            aria-label="Twitter" title="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-icon"
+                                aria-hidden="true">
+                                <path
+                                    d="M16 3.1a6.5 6.5 0 0 1-1.8.5 3.1 3.1 0 0 0 1.4-1.7c-.6.3-1.1.5-1.8.7a3 3 0 0 0-5.2 2.1c0 .2 0 .4.1.6A8.6 8.6 0 0 1 1 2.8a3 3 0 0 0 1 4 3 3 0 0 1-1.4-.4v.1a3 3 0 0 0 2.4 3 3 3 0 0 1-1.4 0 3 3 0 0 0 2.8 2.1A6.1 6.1 0 0 1 0 13a8.5 8.5 0 0 0 4.6 1.3c5.6 0 8.6-4.6 8.6-8.6V5a6.2 6.2 0 0 0 1.8-1.9z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گزارش ها</title>
+    <link rel="stylesheet" href="../css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-layout row m-0">
+        <!-- Sidebar Desktop -->
+        <aside class="sidebar d-none d-lg-block bg-white position-static top-0 col-lg-4">
+            <div class="sidebar-logo d-flex align-items-center gap-3 mb-5">
+                <img src="../assets/public/logo.png" alt="بانک ملی">
+                <span class="fs-5 fw-bold">بانک ملی</span>
+            </div>
+
+            <nav class="d-flex flex-column gap-2">
+                <a href="./dashboard.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>داشبورد</span>
+                </a>
+
+                <a href="./account.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-wallet2"></i>
+                    <span>حساب ها</span>
+                </a>
+
+                <a href="./transfer.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <span>انتقال وجه</span>
+                </a>
+
+                <a href="./transactions.html"
+                    class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <span>گردش حساب</span>
+                </a>
+
+                <a href="./reports.html"
+                    class="nav-item active d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>گزارش ها</span>
+                </a>
+
+                <a href="./setting.html" class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                    <i class="bi bi-gear"></i>
+                    <span>تنظیمات</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Mobile Sidebar -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebarMobile">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">
+                    بانک ملی
+                </h5>
+
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" title="close">
+                </button>
+            </div>
+
+            <div class="offcanvas-body">
+                <nav class="d-flex flex-column gap-2">
+                    <a href="./dashboard.html"
+                        class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>داشبورد</span>
+                    </a>
+
+                    <a href="./account.html"
+                        class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-wallet2"></i>
+                        <span>حساب ها</span>
+                    </a>
+
+                    <a href="./transfer.html"
+                        class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-arrow-left-right"></i>
+                        <span>انتقال وجه</span>
+                    </a>
+
+                    <a href="./transactions.html"
+                        class="nav-item active d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <span>گردش حساب</span>
+                    </a>
+
+                    <a href="./reports.html"
+                        class="nav-item active d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-file-earmark-text"></i>
+                        <span>گزارش ها</span>
+                    </a>
+
+                    <a href="./setting.html" class="nav-item d-flex align-items-center gap-3 p-3 fw-medium text-decoration-none">
+                        <i class="bi bi-gear"></i>
+                        <span>تنظیمات</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- یخش اصلی -->
+        <div class="d-flex flex-fill flex-column col-lg-8">
+            <!-- Header -->
+            <header
+                class="dashboard-header bg-white d-flex justify-content-between align-items-center py-0 px-4 top-0 position-sticky">
+                <div class="d-flex align-items-center gap-3">
+                    <button type="button" title="menuBtn" class="btn btn-light d-lg-none" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebarMobile">
+                        <i class="bi bi-list fs-4"></i>
+                    </button>
+
+                    <div class="header-search position-relative">
+                        <i class="bi bi-search position-absolute top-50"></i>
+                        <input type="text" placeholder="جستجو در خدمات" class="bg-white">
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <button class="header-btn border-0 bg-white" title="bellBtn" type="button">
+                        <i class="bi bi-bell"></i>
+                    </button>
+
+                    <button class="header-btn border-0 bg-white" title="envelopeBtn" type="button">
+                        <i class="bi bi-envelope"></i>
+                    </button>
+
+                    <div class="user-profile d-flex align-items-center">
+                        <img src="../assets/public/7699.jpg" alt="کاربر" class="rounded-circle object-fit-cover">
+                        <span class="d-none d-md-inline">
+                            جین دو
+                        </span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- بخش اصلی -->
+            <main class="dashboard-content">
+                <div class="container-fluid">
+                    <!-- هدر صفحه -->
+                    <div class="page-header">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                            <div>
+                                <h2 class="fw-bold mb-2">
+                                    گزارش‌ها
+                                </h2>
+
+                                <p class="text-muted mb-0">
+                                    تولید، مدیریت و دانلود گزارش‌های بانکی
+                                </p>
+                            </div>
+
+                            <button class="btn btn-primary-custom fw-semibold rounded-1 ms-1">
+                                <i class="bi bi-download me-2"></i>
+                                دانلود آخرین گزارش
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row g-4 mb-5">
+                        <!-- گردش حساب -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="report-card bg-white text-center h-100">
+                                <div
+                                    class="report-icon d-flex justify-content-center align-items-center fs-3 me-auto ms-auto mt-auto">
+                                    <i class="bi bi-receipt"></i>
+                                </div>
+
+                                <h5 class="fw-bold">
+                                    گردش حساب
+                                </h5>
+
+                                <p>
+                                    مشاهده و دانلود گردش حساب
+                                </p>
+
+                                <a href="./transactions.html" class="btn btn-outline-primary w-100">
+                                    مشاهده
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- انتقال وجه -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="report-card bg-white text-center h-100">
+                                <div
+                                    class="report-icon d-flex justify-content-center align-items-center fs-3 me-auto ms-auto mt-auto">
+                                    <i class="bi bi-arrow-left-right"></i>
+                                </div>
+
+                                <h5 class="fw-bold">
+                                    انتقال وجه
+                                </h5>
+
+                                <p>
+                                    گزارش انتقال‌های انجام شده
+                                </p>
+
+                                <button class="btn btn-outline-primary w-100">
+                                    مشاهده
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- کارت ها -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="report-card bg-white text-center h-100">
+                                <div
+                                    class="report-icon d-flex justify-content-center align-items-center fs-3 me-auto ms-auto mt-auto">
+                                    <i class="bi bi-credit-card"></i>
+                                </div>
+
+                                <h5 class="fw-bold">
+                                    کارت‌ها
+                                </h5>
+
+                                <p>
+                                    گزارش تراکنش کارت‌ها
+                                </p>
+
+                                <button class="btn btn-outline-primary w-100">
+                                    مشاهده
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- سپرده -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="report-card bg-white text-center h-100">
+                                <div
+                                    class="report-icon d-flex justify-content-center align-items-center fs-3 me-auto ms-auto mt-auto">
+                                    <i class="bi bi-bank"></i>
+                                </div>
+
+                                <h5 class="fw-bold">
+                                    سپرده‌ها
+                                </h5>
+
+                                <p>
+                                    گزارش سپرده‌های بانکی
+                                </p>
+
+                                <button class="btn btn-outline-primary w-100">
+                                    مشاهده
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Generate Report -->
+                    <div class="card border-0 shadow-sm rounded-4 mb-5">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <i class="bi bi-sliders fs-4 text-primary me-3"></i>
+                                
+                                <div>
+                                    <h4 class="fw-bold mb-1">
+                                        ایجاد گزارش سفارشی
+                                    </h4>
+
+                                    <p class="text-muted mb-0">
+                                        گزارش مورد نظر خود را بر اساس فیلترهای دلخواه ایجاد کنید.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <form id="generateReportForm">
+                                <div class="row g-4">
+                                    <!-- نوع گزارش -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <label class="form-label fw-semibold">
+                                            نوع گزارش
+                                        </label>
+
+                                        <select title="typeReport" class="form-select" required>
+                                            <option value="">
+                                                انتخاب کنید
+                                            </option>
+
+                                            <option>
+                                                گردش حساب
+                                            </option>
+
+                                            <option>
+                                                انتقال وجه
+                                            </option>
+
+                                            <option>
+                                                کارت‌ها
+                                            </option>
+
+                                            <option>
+                                                سپرده‌ها
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <!-- حساب -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <label class="form-label fw-semibold">
+                                            حساب
+                                        </label>
+
+                                        <select title="typeAccount" class="form-select">
+                                            <option>
+                                                همه حساب‌ها
+                                            </option>
+
+                                            <option>
+                                                سپرده کوتاه مدت
+                                            </option>
+
+                                            <option>
+                                                حساب جاری
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <!-- فرمت -->
+                                    <div class="col-lg-4 col-md-6">
+                                        <label class="form-label fw-semibold">
+                                            فرمت خروجی
+                                        </label>
+
+                                        <select title="typeOutput" class="form-select">
+                                            <option>
+                                                PDF
+                                            </option>
+
+                                            <option>
+                                                Excel
+                                            </option>
+
+                                            <option>
+                                                CSV
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <!-- از تاریخ -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <label class="form-label fw-semibold">
+                                            از تاریخ
+                                        </label>
+
+                                        <input title="fromDate" type="date" class="form-control">
+                                    </div>
+
+                                    <!-- تا تاریخ -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <label class="form-label fw-semibold">
+                                            تا تاریخ
+                                        </label>
+
+                                        <input title="toDate" type="date" class="form-control">
+                                    </div>
+
+                                    <!-- وضعیت -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <label class="form-label fw-semibold">
+                                            وضعیت
+                                        </label>
+
+                                        <select title="status" class="form-select">
+                                            <option>
+                                                همه
+                                            </option>
+
+                                            <option>
+                                                موفق
+                                            </option>
+
+                                            <option>
+                                                ناموفق
+                                            </option>
+
+                                            <option>
+                                                در انتظار
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <!-- مبلغ -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <label class="form-label fw-semibold">
+                                            حداقل مبلغ
+                                        </label>
+
+                                        <input type="number" class="form-control" placeholder="0">
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-end gap-3 mt-4">
+                                    <button type="reset" class="btn btn-outline-secondary">
+                                        <i class="bi bi-arrow-counterclockwise me-2"></i>
+                                        پاک کردن
+                                    </button>
+
+                                    <button type="submit" class="btn btn-primary-custom">
+                                        <i class="bi bi-file-earmark-arrow-down me-2"></i>
+                                        ایجاد گزارش
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/dashScript.js"></script>
+</body>
+
+</html>

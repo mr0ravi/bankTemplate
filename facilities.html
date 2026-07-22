@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسهیلات بانک ملی</title>
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm bg-white">
+        <div class="container">
+            <!-- لوگو -->
+            <a class="navbar-brand" href="./index.html">
+                <img src="./assets/public/logo.png" alt="بانک ملی" width="50">
+            </a>
+
+            <!-- دکمه همبرگری برای موبایل -->
+            <button class="navbar-toggler fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- منو -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="./index.html">صفحه اصلی</a></li>
+                    <li class="nav-item dropdown dropdown-hover position-relative">
+                        <a class="nav-link fw-semibold dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            خدمات بانکی
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="./seporde.html">سپرده‌ها</a></li>
+                            <li><a class="dropdown-item" href="./facilities.html">تسهیلات و تعهدات</a></li>
+                            <li><a class="dropdown-item" href="./arzi.html">خدمات ارزی</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./other_khadamat.html">همه خدمات</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="./information.html">اطلاعات شعبه ها</a>
+                    </li>
+                </ul>
+
+                <!-- دکمه های هدر -->
+                <div class="d-flex align-items-center">
+                    <a href="./internet_bank_login.html" class="btn btn-outline-custom fw-semibold rounded-1">ورود به
+                        اینترنت بانک</a>
+                    <a href="#" class="btn btn-primary-custom fw-semibold rounded-1 ms-1">همراه بانک</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="facilities-page-main overflow-x-hidden">
+        <!-- Hero Section -->
+        <section class="facilities-page-hero py-5 text-center">
+            <div class="container">
+                <h1 class="fw-bold text-white mb-3">تسهیلات و تعهدات بانکی</h1>
+                <p class="text-white-50">خدمات مالی و اعتباری بانک ملی متناسب با نیازهای شما</p>
+            </div>
+        </section>
+
+        <!-- فهرست تسهیلات -->
+        <section class="container py-4">
+            <div class="row g-3 justify-content-center">
+                <div class="col-auto">
+                    <a href="#facility-1" class="btn btn-outline-primary rounded-pill px-4">تسهیلات مرابحه</a>
+                </div>
+                <div class="col-auto">
+                    <a href="#facility-2" class="btn btn-outline-primary rounded-pill px-4">تسهیلات جعاله</a>
+                </div>
+                <div class="col-auto">
+                    <a href="#facility-3" class="btn btn-outline-primary rounded-pill px-4">تسهیلات مشارکت</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- لیست تسهیلات -->
+        <div class="container my-5">
+
+            <!-- تسهیلات مرابحه -->
+            <section id="facility-1" class="facilities-page-section card p-4 p-md-2 shadow-sm mb-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-primary fw-bold mb-3">تسهیلات مرابحه</h2>
+                        <p>این تسهیلات برای خرید کالا و خدمات مورد نیاز متقاضی اعطا می‌شود. بانک با خرید کالا و فروش
+                            اقساطی آن به مشتری، نیاز مالی او را برطرف می‌کند.</p>
+                        <h5 class="mt-4">مراحل دریافت:</h5>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="badge bg-light text-dark border fs-6">1. ثبت نام</span>
+                            <span class="badge bg-light text-dark border fs-6">2. اعتبارسنجی</span>
+                            <span class="badge bg-light text-dark border fs-6">3. تشکیل پرونده</span>
+                            <span class="badge bg-primary text-white fs-6">4. واریز</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0">
+                        <div class="bg-light p-3 rounded text-center">
+                            <small class="text-muted">حداکثر مبلغ</small>
+                            <div class="h4 text-primary fw-bold">200 میلیون تومان</div>
+                            <hr>
+                            <small class="text-muted">مدت بازپرداخت</small>
+                            <div class="h5 mb-3">36 ماه</div>
+                            <button class="btn btn-primary w-100">درخواست آنلاین</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- تسهیلات جعاله -->
+            <section id="facility-2" class="facilities-page-section card p-4 p-md-2 shadow-sm mb-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-primary fw-bold mb-3">تسهیلات جعاله</h2>
+                        <p>تسهیلات جعاله در راستای انجام امور خدماتی، تعمیرات و تکمیل ساختمان اعطا می‌گردد. در این
+                            قرارداد، بانک به عنوان عامل یا جاعل انجام خدمات را بر عهده می‌گیرد.</p>
+                        <h5 class="mt-4">مراحل دریافت:</h5>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="badge bg-light text-dark border fs-6">1. ارائه فاکتور تعمیرات</span>
+                            <span class="badge bg-light text-dark border fs-6">2. کارشناسی ملک</span>
+                            <span class="badge bg-light text-dark border fs-6">3. انعقاد قرارداد</span>
+                            <span class="badge bg-primary text-white fs-6">4. دریافت وجه</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0">
+                        <div class="bg-light p-3 rounded text-center">
+                            <small class="text-muted">حداکثر مبلغ</small>
+                            <div class="h4 text-primary fw-bold">150 میلیون تومان</div>
+                            <hr>
+                            <small class="text-muted">مدت بازپرداخت</small>
+                            <div class="h5 mb-3">48 ماه</div>
+                            <button class="btn btn-primary w-100">درخواست آنلاین</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- تسهیلات مشارکت مدنی -->
+            <section id="facility-3" class="facilities-page-section card p-4 p-md-2 shadow-sm mb-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-primary fw-bold mb-3">مشارکت مدنی</h2>
+                        <p>مشارکت مدنی به معنای درآمیختن سهم‌الشرکه نقدی یا غیرنقدی متعلق به اشخاص متعدد به نحو مشاع، به
+                            منظور انتفاع و طبق قرارداد است که عمدتاً در امور تولیدی و بازرگانی کاربرد دارد.</p>
+                        <h5 class="mt-4">مراحل دریافت:</h5>
+                        <div class="d-flex flex-wrap gap-2 mt-2">
+                            <span class="badge bg-light text-dark border fs-6">1. ارائه طرح توجیهی</span>
+                            <span class="badge bg-light text-dark border fs-6">2. بررسی فنی</span>
+                            <span class="badge bg-light text-dark border fs-6">3. تایید هیئت مدیره</span>
+                            <span class="badge bg-primary text-white fs-6">4. تخصیص سرمایه</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0">
+                        <div class="bg-light p-3 rounded text-center">
+                            <small class="text-muted">حداکثر مبلغ</small>
+                            <div class="h4 text-primary fw-bold">500 میلیون تومان</div>
+                            <hr>
+                            <small class="text-muted">نوع بازپرداخت</small>
+                            <div class="h5 mb-3">یکجا یا مرحله‌ای</div>
+                            <button class="btn btn-primary w-100">درخواست آنلاین</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- بخش سوالات متداول -->
+        <section class="container mb-5">
+            <h3 class="text-center mb-4 fw-bold">سوالات متداول تسهیلات</h3>
+
+            <div class="accordion" id="faqAccordion">
+
+                <!-- سوال اول -->
+                <div class="accordion-item rounded-3">
+                    <h2 class="accordion-header bg-white" id="faqHeading1">
+                        <button class="accordion-button fs-5 fw-medium" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                            <i class="bi bi-question-circle-fill me-2 text-primary fs-5"></i>
+                            آیا برای دریافت تسهیلات نیاز به ضامن است؟
+                        </button>
+                    </h2>
+                    <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body fs-6">
+                            بسته به نوع تسهیلات، مبلغ درخواستی و رتبه اعتباری متقاضی، شرایط ضامن متفاوت است. در برخی
+                            موارد امکان استفاده از اعتبارسنجی جایگزین نیز وجود دارد.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- سوال دوم -->
+                <div class="accordion-item rounded-3">
+                    <h2 class="accordion-header bg-white" id="faqHeading2">
+                        <button class="accordion-button fw-medium fs-5 collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false"
+                            aria-controls="faqCollapse2">
+                            <i class="bi bi-clock-fill me-2 text-primary fs-5"></i>
+                            مدت زمان بررسی و پرداخت تسهیلات چقدر است؟
+                        </button>
+                    </h2>
+                    <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body fs-6">
+                            مدت بررسی بسته به نوع پرونده، کامل بودن مدارک و نوع تسهیلات متفاوت است، اما معمولاً پس از
+                            تکمیل مدارک، روند بررسی در کوتاه‌ترین زمان ممکن انجام می‌شود.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- سوال سوم -->
+                <div class="accordion-item rounded-3">
+                    <h2 class="accordion-header bg-white" id="faqHeading3">
+                        <button class="accordion-button fw-medium fs-5 collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false"
+                            aria-controls="faqCollapse3">
+                            <i class="bi bi-laptop-fill me-2 text-primary fs-5"></i>
+                            آیا امکان ثبت درخواست آنلاین وجود دارد؟
+                        </button>
+                    </h2>
+                    <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body fs-6">
+                            بله، در بسیاری از تسهیلات می‌توانید درخواست اولیه خود را به‌صورت آنلاین ثبت کنید و سپس برای
+                            تکمیل مدارک به شعبه مراجعه نمایید.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- سوال چهارم -->
+                <div class="accordion-item rounded-3">
+                    <h2 class="accordion-header bg-white" id="faqHeading4">
+                        <button class="accordion-button fs-5 fw-medium collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false"
+                            aria-controls="faqCollapse4">
+                            <i class="bi bi-file-earmark-text-fill me-2 text-primary fs-5"></i>
+                            چه مدارکی برای دریافت تسهیلات لازم است؟
+                        </button>
+                    </h2>
+                    <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body fs-6">
+                            مدارک هویتی، مدارک شغلی، گردش حساب، مدارک مربوط به وثیقه یا ضامن و در برخی تسهیلات، فاکتور
+                            خرید یا طرح توجیهی مورد نیاز است.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- سوال پنجم -->
+                <div class="accordion-item rounded-3">
+                    <h2 class="accordion-header bg-white" id="faqHeading5">
+                        <button class="accordion-button fs-5 fw-medium collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false"
+                            aria-controls="faqCollapse5">
+                            <i class="bi bi-wallet2 me-2 text-primary fs-5"></i>
+                            آیا می‌توان چند تسهیلات همزمان دریافت کرد؟
+                        </button>
+                    </h2>
+                    <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body fs-6">
+                            این موضوع به وضعیت اعتباری، نوع تسهیلات قبلی و سقف مجاز دریافت تسهیلات بستگی دارد و توسط
+                            بانک بررسی می‌شود.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- سوال ششم -->
+                <div class="accordion-item rounded-3 mb-0">
+                    <h2 class="accordion-header bg-white" id="faqHeading6">
+                        <button class="accordion-button fs-5 fw-medium collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false"
+                            aria-controls="faqCollapse6">
+                            <i class="bi bi-x-octagon-fill me-2 text-primary fs-5"></i>
+                            اگر مدارک ناقص باشد چه اتفاقی می‌افتد؟
+                        </button>
+                    </h2>
+                    <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body fs-6">
+                            در صورت ناقص بودن مدارک، پرونده تا زمان تکمیل مدارک در وضعیت بررسی باقی می‌ماند و پس از
+                            تکمیل، ادامه فرایند انجام می‌شود.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="footer-inner d-flex align-items-center justify-content-between flex-wrap">
+                <!-- کپی رایت -->
+                <div class="footer-brand d-flex align-items-center flex-wrap">
+                    <span class="footer-copyright">
+                        © بانک ملی 1405،
+                    </span>
+                </div>
+
+                <!-- شبکه‌های اجتماعی -->
+                <ul class="social-list list-unstyled d-flex align-items-center p-0 m-0">
+                    <li>
+                        <a href="#"
+                            class="social-link d-inline-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                            aria-label="Instagram" title="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-icon"
+                                aria-hidden="true">
+                                <path
+                                    d="M8 0C5.8 0 5.5.01 4.7.05 3.8.09 3.3.22 2.8.42a4 4 0 0 0-1.4.92A4 4 0 0 0 .4 2.76C.2 3.27.1 3.85.05 4.7.01 5.5 0 5.8 0 8s.01 2.5.05 3.3c.05.85.16 1.43.37 1.94.2.52.48.97.92 1.41.45.45.9.72 1.42.93.51.2 1.09.33 1.94.37.8.04 1.1.05 3.3.05s2.5-.01 3.3-.05c.85-.04 1.43-.17 1.94-.37.52-.2.97-.48 1.41-.93.45-.45.72-.9.93-1.42.2-.51.33-1.09.37-1.94.04-.8.05-1.1.05-3.3s-.01-2.5-.05-3.3c-.04-.85-.17-1.43-.37-1.94a4 4 0 0 0-.93-1.41 4 4 0 0 0-1.41-.92c-.51-.2-1.09-.33-1.94-.37C10.5.01 10.2 0 8 0zm0 1.4c2.17 0 2.43.01 3.28.05.72.03 1.11.15 1.37.25.34.13.58.29.84.55.26.26.42.5.55.84.1.26.22.65.25 1.37.04.85.05 1.11.05 3.28s-.01 2.43-.05 3.28c-.03.72-.15 1.11-.25 1.37-.13.34-.29.58-.55.84-.26.26-.5.42-.84.55-.26.1-.65.22-1.37.25-.85.04-1.11.05-3.28.05s-2.43-.01-3.28-.05c-.72-.03-1.11-.15-1.37-.25a2.6 2.6 0 0 1-.84-.55 2.6 2.6 0 0 1-.55-.84c-.1-.26-.22-.65-.25-1.37C1.41 10.43 1.4 10.17 1.4 8s.01-2.43.05-3.28c.03-.72.15-1.11.25-1.37.13-.34.29-.58.55-.84.26-.26.5-.42.84-.55.26-.1.65-.22 1.37-.25.85-.04 1.11-.05 3.28-.05z" />
+                                <path
+                                    d="M8 3.9A4.1 4.1 0 1 0 8 12.1 4.1 4.1 0 0 0 8 3.9zm0 6.8A2.7 2.7 0 1 1 8 5.2a2.7 2.7 0 0 1 0 5.4z" />
+                                <circle cx="12.2" cy="3.8" r="1" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="social-link d-inline-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                            aria-label="Facebook" title="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-icon"
+                                aria-hidden="true">
+                                <path
+                                    d="M16 8.05A8 8 0 1 0 6.7 15.9v-5.6H4.7V8.05h2V6.3c0-2 1.2-3.1 3-3.1.9 0 1.8.16 1.8.16v2h-1c-1 0-1.3.6-1.3 1.2v1.5h2.2l-.35 2.25h-1.85v5.6A8 8 0 0 0 16 8.05z" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="social-link d-inline-flex align-items-center justify-content-center rounded-circle text-decoration-none"
+                            aria-label="Twitter" title="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-icon"
+                                aria-hidden="true">
+                                <path
+                                    d="M16 3.1a6.5 6.5 0 0 1-1.8.5 3.1 3.1 0 0 0 1.4-1.7c-.6.3-1.1.5-1.8.7a3 3 0 0 0-5.2 2.1c0 .2 0 .4.1.6A8.6 8.6 0 0 1 1 2.8a3 3 0 0 0 1 4 3 3 0 0 1-1.4-.4v.1a3 3 0 0 0 2.4 3 3 3 0 0 1-1.4 0 3 3 0 0 0 2.8 2.1A6.1 6.1 0 0 1 0 13a8.5 8.5 0 0 0 4.6 1.3c5.6 0 8.6-4.6 8.6-8.6V5a6.2 6.2 0 0 0 1.8-1.9z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
